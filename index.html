@@ -1013,134 +1013,134 @@ body.cart-open{
 }
 
 
-/* MI CUENTA PREMIUM CON BOTONES Y BUSCADOR */
-.account-premium-section{
-  padding:5rem 6%;
-  background:linear-gradient(180deg,#fdfaf5 0%,#f6f1ea 100%);
+/* ATHÉLIER PRIVÉ - SECCIÓN INDEPENDIENTE */
+.prive-section{
+  background:linear-gradient(180deg,var(--white) 0%,var(--cream) 100%);
+  padding:5rem 3rem;
 }
 
-.account-premium-wrap{
-  max-width:1400px;
-  margin:auto;
+.prive-wrap{
+  max-width:1180px;
+  margin:0 auto;
 }
 
-.account-hero{
+.prive-hero{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
+  grid-template-columns:1.1fr .9fr;
   gap:2rem;
-  margin-bottom:2rem;
   align-items:center;
+  margin-bottom:2rem;
 }
 
-.account-tag{
-  display:inline-block;
-  margin-bottom:1rem;
-  letter-spacing:.25rem;
-  font-size:.72rem;
+.prive-kicker{
+  font-size:.62rem;
+  letter-spacing:.32em;
   color:var(--gold);
   text-transform:uppercase;
+  margin-bottom:.7rem;
 }
 
-.account-hero h2{
+.prive-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:4rem;
+  font-size:clamp(2.3rem,5vw,4rem);
   font-weight:300;
-  margin-bottom:1rem;
-}
-
-.account-hero p{
-  max-width:650px;
-  color:var(--warm-gray);
-  line-height:1.8;
-}
-
-.account-rank-card{
-  background:linear-gradient(145deg,#231f1b,#3a3129);
-  color:#fff;
-  border-radius:28px;
-  padding:2rem;
-  box-shadow:0 20px 60px rgba(0,0,0,.16);
-  border:1px solid rgba(184,149,106,.35);
-}
-
-.rank-label{
-  opacity:.7;
-  letter-spacing:.12rem;
-  font-size:.7rem;
+  line-height:1;
   text-transform:uppercase;
 }
 
-.account-rank-card h3{
-  margin:.7rem 0;
-  font-size:2rem;
-  letter-spacing:.18rem;
+.prive-title span{
+  color:var(--gold);
+  font-style:italic;
 }
 
-.rank-progress{
-  width:100%;
-  height:10px;
-  border-radius:999px;
+.prive-copy{
+  margin-top:1rem;
+  font-size:.78rem;
+  line-height:1.9;
+  color:var(--warm-gray);
+  max-width:620px;
+}
+
+.prive-rank-card{
+  background:linear-gradient(145deg,#231f1b,#3b3128);
+  color:#fff;
+  border:1px solid rgba(184,149,106,.35);
+  padding:1.6rem;
+  box-shadow:0 18px 50px rgba(42,37,32,.18);
+}
+
+.prive-rank-card small{
+  font-size:.58rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+
+.prive-rank-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.8rem;
+  font-weight:300;
+  margin:.5rem 0;
+  color:var(--gold);
+}
+
+.prive-progress{
+  height:8px;
   background:rgba(255,255,255,.12);
   overflow:hidden;
   margin:1rem 0;
 }
 
-.rank-progress-fill{
+.prive-progress span{
+  display:block;
   height:100%;
-  background:linear-gradient(90deg,var(--gold),#e8d1ae);
-  border-radius:999px;
+  width:0%;
+  background:linear-gradient(90deg,var(--gold),#ead2ae);
 }
 
-.account-rank-card small{
-  color:rgba(255,255,255,.62);
-}
-
-.account-search{
+.prive-search{
   position:relative;
-  margin:0 0 1.2rem;
+  margin:1rem 0 1rem;
 }
 
-.account-search svg{
-  position:absolute;
-  left:1rem;
-  top:50%;
-  transform:translateY(-50%);
-  width:18px;
-  height:18px;
-  stroke:var(--gold);
-}
-
-.account-search input{
+.prive-search input{
   width:100%;
   padding:1rem 1rem 1rem 2.8rem;
   border:1px solid rgba(184,149,106,.25);
   background:rgba(255,255,255,.72);
-  border-radius:999px;
   font-family:'Josefin Sans',sans-serif;
-  font-size:.78rem;
+  font-size:.72rem;
   outline:none;
   color:var(--charcoal);
-  box-shadow:0 8px 28px rgba(0,0,0,.04);
 }
 
-.account-search input:focus{
+.prive-search input:focus{
   border-color:var(--gold);
 }
 
-.account-tabs{
-  display:flex;
-  gap:.8rem;
-  flex-wrap:wrap;
-  margin:0 0 1.4rem;
+.prive-search svg{
+  position:absolute;
+  left:1rem;
+  top:50%;
+  transform:translateY(-50%);
+  width:17px;
+  height:17px;
+  stroke:var(--gold);
 }
 
-.account-tab-btn{
+.prive-tabs{
+  display:flex;
+  gap:.65rem;
+  flex-wrap:wrap;
+  margin-bottom:1.2rem;
+}
+
+.prive-tab{
   border:1px solid rgba(184,149,106,.28);
-  background:rgba(255,255,255,.55);
-  padding:.85rem 1rem;
-  border-radius:999px;
+  background:rgba(255,255,255,.56);
+  padding:.75rem .95rem;
   font-family:'Josefin Sans',sans-serif;
-  font-size:.66rem;
+  font-size:.58rem;
   letter-spacing:.14em;
   text-transform:uppercase;
   color:var(--warm-gray);
@@ -1148,426 +1148,182 @@ body.cart-open{
   transition:all .25s ease;
 }
 
-.account-tab-btn:hover,
-.account-tab-btn.active{
+.prive-tab:hover,
+.prive-tab.active{
   background:var(--charcoal);
   color:#fff;
   border-color:var(--charcoal);
-  transform:translateY(-1px);
 }
 
-.account-content{
-  background:rgba(255,255,255,.72);
-  backdrop-filter:blur(10px);
+.prive-content{
+  background:rgba(255,255,255,.64);
   border:1px solid rgba(184,149,106,.18);
-  border-radius:28px;
-  padding:2rem;
-  box-shadow:0 10px 35px rgba(0,0,0,.05);
-  min-height:330px;
+  padding:1.5rem;
+  min-height:280px;
 }
 
-.account-panel{
+.prive-panel{
   display:none;
 }
 
-.account-panel.active{
+.prive-panel.active,
+.prive-panel.search-match{
   display:block;
 }
 
-.account-panel.search-match{
-  display:block;
-  border-bottom:1px solid rgba(184,149,106,.16);
-  padding-bottom:1.6rem;
-  margin-bottom:1.6rem;
-}
-
-.panel-head{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:1rem;
+.prive-panel.search-match{
+  border-bottom:1px solid rgba(184,149,106,.18);
+  padding-bottom:1.2rem;
   margin-bottom:1.2rem;
 }
 
-.panel-head h4{
-  font-size:1.1rem;
-  letter-spacing:.08rem;
+.prive-panel h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  font-weight:300;
+  margin-bottom:.6rem;
 }
 
-.panel-head p{
-  font-size:.78rem;
+.prive-panel p{
+  font-size:.72rem;
   color:var(--warm-gray);
-  line-height:1.7;
-  margin-top:.35rem;
+  line-height:1.8;
 }
 
-.reward-big{
+.prive-big{
   font-family:'Cormorant Garamond',serif;
   font-size:4rem;
-  font-weight:300;
-  color:var(--gold);
-}
-
-.reward-layout{
-  display:grid;
-  grid-template-columns:.65fr 1.35fr;
-  gap:1.2rem;
-  align-items:stretch;
-}
-
-.reward-next{
-  padding:1rem;
-  border-radius:16px;
-  background:#efe4d4;
-  line-height:1.6;
-}
-
-.account-list{
-  display:flex;
-  flex-direction:column;
-  gap:.9rem;
-  color:#5f554c;
-  list-style:none;
-}
-
-.account-list li{
-  padding:.9rem 1rem;
-  border-radius:16px;
-  background:#f5eee4;
-  border:1px solid rgba(184,149,106,.12);
-}
-
-.profile-tags,
-.badge-grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:.7rem;
-}
-
-.profile-tags span,
-.badge-grid span{
-  padding:.7rem 1rem;
-  border-radius:999px;
-  background:#efe4d4;
-  color:#6c5845;
-  font-size:.78rem;
-}
-
-.profile-note,
-.referral-note{
-  margin-top:1rem;
-  color:var(--warm-gray);
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:1rem;
-}
-
-.stats-grid div{
-  padding:1rem;
-  border-radius:18px;
-  background:#f5eee4;
-}
-
-.stats-grid strong{
-  display:block;
-  font-size:1.3rem;
-  margin-bottom:.3rem;
-}
-
-.stats-grid span{
-  font-size:.78rem;
-  color:var(--warm-gray);
-}
-
-.referral-box{
-  display:flex;
-  gap:1rem;
-  align-items:center;
-  flex-wrap:wrap;
-}
-
-.referral-box span{
-  padding:1rem 1.2rem;
-  border-radius:16px;
-  background:#efe4d4;
-  letter-spacing:.12rem;
-}
-
-.referral-box button{
-  border:none;
-  padding:1rem 1.2rem;
-  border-radius:16px;
-  background:#1f1b17;
-  color:#fff;
-  cursor:pointer;
-  font-family:'Josefin Sans',sans-serif;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  font-size:.65rem;
-}
-
-.account-no-results{
-  display:none;
-  padding:1.2rem;
-  border:1px dashed rgba(184,149,106,.35);
-  border-radius:18px;
-  color:var(--warm-gray);
-  text-align:center;
-}
-
-@media(max-width:900px){
-  .account-hero{
-    grid-template-columns:1fr;
-  }
-
-  .account-hero h2{
-    font-size:2.8rem;
-  }
-
-  .account-premium-section{
-    padding:3rem 1.2rem;
-  }
-
-  .account-rank-card,
-  .account-content{
-    border-radius:22px;
-    padding:1.4rem;
-  }
-
-  .stats-grid,
-  .reward-layout{
-    grid-template-columns:1fr;
-  }
-
-  .account-tabs{
-    overflow-x:auto;
-    flex-wrap:nowrap;
-    padding-bottom:.4rem;
-  }
-
-  .account-tab-btn{
-    white-space:nowrap;
-  }
-}
-
-
-/* MODAL MI CUENTA LIMPIO */
-.clean-account-modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:120000;
-  background:rgba(0,0,0,.62);
-  align-items:center;
-  justify-content:center;
-  padding:1rem;
-}
-
-.clean-account-modal.open{
-  display:flex !important;
-}
-
-.clean-account-panel{
-  width:100%;
-  max-width:980px;
-  max-height:92dvh;
-  overflow:auto;
-  background:var(--white);
-  border:1px solid rgba(184,149,106,.35);
-  box-shadow:0 28px 90px rgba(0,0,0,.32);
-}
-
-.clean-account-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:var(--charcoal);
-  color:#fff;
-  padding:1rem 1.3rem;
-  position:sticky;
-  top:0;
-  z-index:2;
-}
-
-.clean-account-head h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.45rem;
-  font-weight:300;
-}
-
-.clean-account-head button{
-  background:none;
-  border:none;
-  color:#fff;
-  font-size:1.5rem;
-  cursor:pointer;
-}
-
-.clean-account-body{
-  padding:1.4rem;
-}
-
-.clean-account-login{
-  display:grid;
-  gap:.75rem;
-  max-width:430px;
-  margin:0 auto;
-}
-
-.clean-account-login input{
-  width:100%;
-  padding:.85rem;
-  border:1px solid var(--sand);
-  font-family:'Josefin Sans',sans-serif;
-  outline:none;
-}
-
-.clean-account-login button,
-.clean-account-primary{
-  width:100%;
-  padding:.9rem;
-  background:var(--charcoal);
-  color:#fff;
-  border:none;
-  font-family:'Josefin Sans',sans-serif;
-  font-size:.64rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-
-.clean-account-primary:hover,
-.clean-account-login button:hover{
-  background:var(--gold);
-}
-
-.clean-account-dashboard{
-  display:none;
-}
-
-.clean-account-dashboard.active{
-  display:block;
-}
-
-.clean-account-msg{
-  margin-top:.8rem;
-  color:var(--warm-gray);
-  font-size:.72rem;
-  line-height:1.6;
-  text-align:center;
-}
-
-.clean-account-tabs{
-  display:flex;
-  gap:.7rem;
-  flex-wrap:wrap;
-  margin:1rem 0 1.3rem;
-}
-
-.clean-account-tab{
-  border:1px solid rgba(184,149,106,.28);
-  background:rgba(245,240,232,.65);
-  padding:.75rem .9rem;
-  border-radius:999px;
-  font-family:'Josefin Sans',sans-serif;
-  font-size:.58rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--warm-gray);
-  cursor:pointer;
-}
-
-.clean-account-tab.active{
-  background:var(--charcoal);
-  color:#fff;
-  border-color:var(--charcoal);
-}
-
-.clean-account-search{
-  position:relative;
-}
-
-.clean-account-search input{
-  width:100%;
-  padding:.9rem 1rem;
-  border:1px solid rgba(184,149,106,.28);
-  border-radius:999px;
-  font-family:'Josefin Sans',sans-serif;
-  outline:none;
-}
-
-.clean-account-card{
-  display:none;
-  border:1px solid rgba(184,149,106,.18);
-  background:rgba(245,240,232,.45);
-  padding:1.2rem;
-  margin-top:1rem;
-}
-
-.clean-account-card.active,
-.clean-account-card.search-match{
-  display:block;
-}
-
-.clean-account-card h4{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.35rem;
-  font-weight:300;
-  margin-bottom:.7rem;
-}
-
-.clean-account-stars{
-  font-family:'Cormorant Garamond',serif;
-  font-size:3.2rem;
   color:var(--gold);
   line-height:1;
+  margin:.5rem 0;
 }
 
-.clean-account-list{
+.prive-box{
+  background:var(--cream);
+  border:1px solid rgba(184,149,106,.16);
+  padding:1rem;
+  margin-top:1rem;
+}
+
+.prive-list{
   list-style:none;
   display:grid;
-  gap:.65rem;
+  gap:.7rem;
+  margin-top:.8rem;
 }
 
-.clean-account-list li{
+.prive-list li{
   background:#fff;
   border:1px solid rgba(184,149,106,.14);
   padding:.8rem;
+  font-size:.7rem;
   color:var(--warm-gray);
+}
+
+.prive-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+  margin-top:.9rem;
+}
+
+.prive-tags span{
+  background:var(--cream);
+  border:1px solid rgba(184,149,106,.18);
+  padding:.6rem .85rem;
+  font-size:.68rem;
+  color:var(--warm-gray);
+}
+
+.prive-stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:.8rem;
+  margin-top:1rem;
+}
+
+.prive-stats div{
+  background:var(--cream);
+  border:1px solid rgba(184,149,106,.16);
+  padding:1rem;
+}
+
+.prive-stats strong{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;
+  font-weight:300;
+  color:var(--gold);
+  margin-bottom:.25rem;
+}
+
+.prive-stats span{
+  font-size:.62rem;
+  color:var(--warm-gray);
+}
+
+.prive-ref{
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:1rem;
+}
+
+.prive-ref span{
+  background:var(--cream);
+  border:1px solid rgba(184,149,106,.18);
+  padding:.85rem 1rem;
+  letter-spacing:.12em;
   font-size:.72rem;
 }
 
-.clean-tags{
-  display:flex;
-  gap:.55rem;
-  flex-wrap:wrap;
+.prive-ref button{
+  background:var(--charcoal);
+  color:#fff;
+  border:none;
+  padding:.9rem 1.1rem;
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.6rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  cursor:pointer;
 }
 
-.clean-tags span{
-  background:#fff;
-  border:1px solid rgba(184,149,106,.18);
-  padding:.55rem .8rem;
-  border-radius:999px;
+.prive-ref button:hover{
+  background:var(--gold);
+}
+
+.prive-no-results{
+  display:none;
+  border:1px dashed rgba(184,149,106,.35);
+  padding:1rem;
+  text-align:center;
+  font-size:.72rem;
   color:var(--warm-gray);
-  font-size:.68rem;
 }
 
 @media(max-width:768px){
-  .clean-account-panel{
-    max-height:100dvh;
-    height:100dvh;
+  .prive-section{
+    padding:3rem 1.2rem;
   }
 
-  .clean-account-tabs{
+  .prive-hero{
+    grid-template-columns:1fr;
+  }
+
+  .prive-tabs{
     flex-wrap:nowrap;
     overflow-x:auto;
+    padding-bottom:.4rem;
   }
 
-  .clean-account-tab{
+  .prive-tab{
     white-space:nowrap;
+  }
+
+  .prive-stats{
+    grid-template-columns:1fr 1fr;
   }
 }
 
@@ -1590,10 +1346,11 @@ body.cart-open{
       <li><a href="#perfumes">Perfumes</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#recompensas">Recompensas</a></li>
+      <li><a href="#athelier-prive">Privé</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <div class="nav-icons">
-      <button class="account-btn" onclick="openCleanAccount()">Mi cuenta</button>
+      <button class="account-btn" onclick="openAccountModal()">Mi cuenta</button>
       <button class="account-btn admin-nav-btn" id="adminNavBtn" onclick="openAdminModal()" style="display:inline-block;">Admin</button>
       <svg onclick="openCart()" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
       <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
@@ -1612,6 +1369,7 @@ body.cart-open{
   <a href="#perfumes" onclick="toggleMenu()">Perfumes</a>
   <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
   <a href="#recompensas" onclick="toggleMenu()">Recompensas</a>
+  <a href="#athelier-prive" onclick="toggleMenu()">Privé</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
 </div>
 
@@ -1837,6 +1595,99 @@ body.cart-open{
   </div>
 </div>
 
+
+<section class="prive-section" id="athelier-prive">
+  <div class="prive-wrap">
+    <div class="prive-hero">
+      <div>
+        <p class="prive-kicker">Athélier Privé</p>
+        <h2 class="prive-title">Tu espacio<br><span>personal</span></h2>
+        <p class="prive-copy">Aquí puedes consultar recompensas, historial, favoritos, perfil olfativo, insignias, estadísticas y referido sin saturar el botón de Mi Cuenta.</p>
+      </div>
+
+      <div class="prive-rank-card">
+        <small>Rango actual</small>
+        <h3 id="priveRank">Iniciado</h3>
+        <p><span id="priveStarsTop">0</span> estrellas acumuladas</p>
+        <div class="prive-progress"><span id="priveProgress"></span></div>
+        <p id="priveRankText">Inicia sesión para ver tu progreso.</p>
+      </div>
+    </div>
+
+    <div class="prive-search">
+      <svg fill="none" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+      <input type="text" id="priveSearch" oninput="searchPrive(this.value)" placeholder="Buscar: estrellas, pedidos, favoritos, perfil, referido...">
+    </div>
+
+    <div class="prive-tabs">
+      <button class="prive-tab active" onclick="showPrive('recompensas',this)">⭐ Recompensas</button>
+      <button class="prive-tab" onclick="showPrive('historial',this)">📦 Historial</button>
+      <button class="prive-tab" onclick="showPrive('favoritos',this)">♡ Favoritos</button>
+      <button class="prive-tab" onclick="showPrive('perfil',this)">🏛 Perfil</button>
+      <button class="prive-tab" onclick="showPrive('insignias',this)">🏆 Insignias</button>
+      <button class="prive-tab" onclick="showPrive('estadisticas',this)">📊 Estadísticas</button>
+      <button class="prive-tab" onclick="showPrive('referido',this)">🎁 Referido</button>
+    </div>
+
+    <div class="prive-content">
+      <div class="prive-no-results" id="priveNoResults">No encontré resultados.</div>
+
+      <div class="prive-panel active" id="prive-recompensas" data-search="recompensas estrellas puntos premio canje decant gratis">
+        <h4>⭐ Recompensas</h4>
+        <p>Consulta tus estrellas y el siguiente premio disponible.</p>
+        <div class="prive-big" id="priveStarsMain">0</div>
+        <p>Estrellas acumuladas</p>
+        <div class="prive-box" id="priveNextReward">Inicia sesión para ver tu siguiente recompensa.</div>
+      </div>
+
+      <div class="prive-panel" id="prive-historial" data-search="historial pedidos compras ordenes decants perfumes">
+        <h4>📦 Historial</h4>
+        <p>Tus pedidos recientes aparecerán aquí cuando estén registrados.</p>
+        <ul class="prive-list" id="priveHistory"><li>Aún no hay pedidos registrados.</li></ul>
+      </div>
+
+      <div class="prive-panel" id="prive-favoritos" data-search="favoritos wishlist lista perfumes guardados">
+        <h4>♡ Favoritos</h4>
+        <p>Perfumes guardados para probar después.</p>
+        <ul class="prive-list" id="priveFavorites"><li>Aún no tienes favoritos.</li></ul>
+      </div>
+
+      <div class="prive-panel" id="prive-perfil" data-search="perfil olfativo aroma notas oriental dulce fresco acuatico nocturno">
+        <h4>🏛 Perfil Olfativo</h4>
+        <p>Una lectura rápida de los estilos que más repites.</p>
+        <div class="prive-tags" id="priveProfile"><span>Sin datos todavía</span></div>
+      </div>
+
+      <div class="prive-panel" id="prive-insignias" data-search="insignias logros rango coleccionista elite olimpo">
+        <h4>🏆 Insignias</h4>
+        <p>Logros desbloqueados según tus compras y preferencias.</p>
+        <div class="prive-tags" id="priveBadges"><span>🏛 Iniciado Athelier</span></div>
+      </div>
+
+      <div class="prive-panel" id="prive-estadisticas" data-search="estadisticas resumen perfumes probados mililitros aroma favorito">
+        <h4>📊 Estadísticas</h4>
+        <p>Resumen visual de tu experiencia con Athélier.</p>
+        <div class="prive-stats">
+          <div><strong id="priveStatPerfumes">0</strong><span>Perfumes probados</span></div>
+          <div><strong id="priveStatMl">0ml</strong><span>Descubiertos</span></div>
+          <div><strong id="priveStatAroma">—</strong><span>Aroma favorito</span></div>
+          <div><strong id="priveStatTop">—</strong><span>Más comprado</span></div>
+        </div>
+      </div>
+
+      <div class="prive-panel" id="prive-referido" data-search="referido codigo invitar amigos estrellas extra">
+        <h4>🎁 Código de Referido</h4>
+        <p>Comparte tu código y gana estrellas cuando tu referido compre.</p>
+        <div class="prive-ref">
+          <span id="priveRefCode">Inicia sesión</span>
+          <button onclick="copyPriveRef()">Copiar código</button>
+        </div>
+        <div class="prive-box">Sugerencia: 2 estrellas para ambos cuando el referido haga su primera compra confirmada.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="sw" style="background:var(--cream);" id="contacto">
   <div class="contact-inner">
     <h2 class="sec-title">Contáctanos</h2>
@@ -1850,94 +1701,6 @@ body.cart-open{
     </div>
   </div>
 </div>
-
-
-<section id="cuenta-premium" class="account-premium-section">
-  <div class="account-premium-wrap">
-    <div class="account-hero">
-      <div>
-        <span class="account-tag">ATHÉLIER PRIVÉ</span>
-        <h2>Mi Cuenta</h2>
-        <p>Tu espacio personal dentro de Athélier. Sigue tu progreso, recompensas y descubre tu perfil olfativo sin saturarte de información.</p>
-      </div>
-
-      <div class="account-rank-card">
-        <span class="rank-label">Rango actual</span>
-        <h3 id="accountRank">COLECCIONISTA</h3>
-        <p><span id="accountStarsTop">0</span> estrellas acumuladas</p>
-        <div class="rank-progress"><div class="rank-progress-fill" id="accountRankProgress" style="width:0%"></div></div>
-        <small id="accountRankText">Inicia sesión para ver tu progreso.</small>
-      </div>
-    </div>
-
-    <div class="account-search">
-      <svg fill="none" viewBox="0 0 24 24">
-        <circle cx="11" cy="11" r="7"></circle>
-        <path d="M20 20l-3.5-3.5"></path>
-      </svg>
-      <input id="accountSearchInput" type="text" placeholder="Buscar en mi cuenta: estrellas, favoritos, pedidos, perfil, referido..." oninput="searchAccountPanels(this.value)">
-    </div>
-
-    <div class="account-tabs">
-      <button class="account-tab-btn active" onclick="showAccountPanel('recompensas', this)">⭐ Recompensas</button>
-      <button class="account-tab-btn" onclick="showAccountPanel('historial', this)">📦 Historial</button>
-      <button class="account-tab-btn" onclick="showAccountPanel('favoritos', this)">♡ Favoritos</button>
-      <button class="account-tab-btn" onclick="showAccountPanel('perfil', this)">🏛 Perfil</button>
-      <button class="account-tab-btn" onclick="showAccountPanel('insignias', this)">🏆 Insignias</button>
-      <button class="account-tab-btn" onclick="showAccountPanel('estadisticas', this)">📊 Estadísticas</button>
-      <button class="account-tab-btn" onclick="showAccountPanel('referido', this)">🎁 Referido</button>
-    </div>
-
-    <div class="account-content">
-      <div class="account-no-results" id="accountNoResults">No encontré resultados en tu cuenta.</div>
-
-      <div class="account-panel active" id="panel-recompensas" data-search="recompensas estrellas puntos premio decant gratis canje">
-        <div class="panel-head"><div><h4>⭐ Recompensas</h4><p>Consulta tus estrellas y el siguiente premio disponible.</p></div></div>
-        <div class="reward-layout">
-          <div><div class="reward-big" id="accountStarsMain">0</div><p>Estrellas acumuladas</p></div>
-          <div class="reward-next" id="accountNextReward"><strong>Próximo premio:</strong><br>Inicia sesión para ver tu siguiente recompensa.</div>
-        </div>
-      </div>
-
-      <div class="account-panel" id="panel-historial" data-search="historial pedidos compras ordenes perfume decants">
-        <div class="panel-head"><div><h4>📦 Historial</h4><p>Tus pedidos recientes aparecerán aquí cuando estén registrados.</p></div></div>
-        <ul class="account-list" id="accountHistoryList"><li>Aún no hay pedidos registrados.</li></ul>
-      </div>
-
-      <div class="account-panel" id="panel-favoritos" data-search="favoritos wishlist guardar perfume deseo lista">
-        <div class="panel-head"><div><h4>♡ Favoritos</h4><p>Perfumes guardados para probar después.</p></div></div>
-        <ul class="account-list" id="accountFavoritesList"><li>Aún no tienes favoritos.</li></ul>
-      </div>
-
-      <div class="account-panel" id="panel-perfil" data-search="perfil olfativo aroma notas oriental dulce fresco nocturno avainillado">
-        <div class="panel-head"><div><h4>🏛 Perfil Olfativo</h4><p>Una lectura rápida de los estilos que más repites.</p></div></div>
-        <div class="profile-tags" id="accountProfileTags"><span>Sin datos todavía</span></div>
-        <p class="profile-note">Se actualizará con tus compras recientes.</p>
-      </div>
-
-      <div class="account-panel" id="panel-insignias" data-search="insignias logros rango cliente elite coleccionista">
-        <div class="panel-head"><div><h4>🏆 Insignias</h4><p>Logros desbloqueados según tus compras y preferencias.</p></div></div>
-        <div class="badge-grid" id="accountBadges"><span>🏛 Iniciado Athelier</span></div>
-      </div>
-
-      <div class="account-panel" id="panel-estadisticas" data-search="estadisticas resumen perfumes probados mililitros aroma favorito">
-        <div class="panel-head"><div><h4>📊 Estadísticas</h4><p>Resumen visual de tu experiencia con Athélier.</p></div></div>
-        <div class="stats-grid">
-          <div><strong id="statPerfumes">0</strong><span>Perfumes probados</span></div>
-          <div><strong id="statMl">0ml</strong><span>Descubiertos</span></div>
-          <div><strong id="statAroma">—</strong><span>Aroma favorito</span></div>
-          <div><strong id="statTop">—</strong><span>Más comprado</span></div>
-        </div>
-      </div>
-
-      <div class="account-panel" id="panel-referido" data-search="referido codigo invitar amigos estrellas extra">
-        <div class="panel-head"><div><h4>🎁 Código de Referido</h4><p>Comparte tu código y gana estrellas cuando tu referido compre.</p></div></div>
-        <div class="referral-box"><span id="refCode">Inicia sesión</span><button onclick="copyReferral()">Copiar código</button></div>
-        <p class="referral-note">Recomendación: 2 estrellas para ambos cuando el referido haga su primera compra confirmada.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="fgrid">
@@ -3280,90 +3043,105 @@ window.addEventListener('load', () => {
 </script>
 
 
-<div class="clean-account-modal" id="cleanAccountModal" onclick="if(event.target===this)closeCleanAccount()">
-  <div class="clean-account-panel">
-    <div class="clean-account-head">
-      <h3>Mi Cuenta Athelier</h3>
-      <button onclick="closeCleanAccount()">×</button>
-    </div>
+<script>
+function showPrive(panel, btn){
+  const search = document.getElementById('priveSearch');
+  if(search) search.value = '';
 
-    <div class="clean-account-body">
-      <div id="cleanAuthBox">
-        <div class="clean-account-login">
-          <input id="cleanEmail" type="email" placeholder="Correo electrónico">
-          <input id="cleanPass" type="password" placeholder="Contraseña">
-          <button onclick="cleanLogin()">Iniciar sesión</button>
-          <button onclick="cleanRegister()" style="background:var(--gold);">Crear cuenta</button>
-          <p class="clean-account-msg" id="cleanMsg">Inicia sesión para ver tus estrellas, recompensas e historial.</p>
-        </div>
-      </div>
+  document.querySelectorAll('.prive-panel').forEach(el => {
+    el.classList.remove('active');
+    el.classList.remove('search-match');
+  });
+  document.querySelectorAll('.prive-tab').forEach(el => el.classList.remove('active'));
 
-      <div id="cleanDashboard" class="clean-account-dashboard">
-        <p class="sec-sub" style="text-align:left;">ATHÉLIER PRIVÉ</p>
-        <h2 class="sec-title" style="text-align:left;">Mi Cuenta</h2>
+  const selected = document.getElementById('prive-' + panel);
+  if(selected) selected.classList.add('active');
+  if(btn) btn.classList.add('active');
 
-        <div class="clean-account-search">
-          <input id="cleanSearch" oninput="cleanSearchPanels(this.value)" placeholder="🔍 Buscar: recompensas, historial, favoritos, perfil, referido...">
-        </div>
+  const noResults = document.getElementById('priveNoResults');
+  if(noResults) noResults.style.display = 'none';
+}
 
-        <div class="clean-account-tabs">
-          <button class="clean-account-tab active" onclick="cleanPanel('recompensas',this)">⭐ Recompensas</button>
-          <button class="clean-account-tab" onclick="cleanPanel('historial',this)">📦 Historial</button>
-          <button class="clean-account-tab" onclick="cleanPanel('favoritos',this)">♡ Favoritos</button>
-          <button class="clean-account-tab" onclick="cleanPanel('perfil',this)">🏛 Perfil</button>
-          <button class="clean-account-tab" onclick="cleanPanel('insignias',this)">🏆 Insignias</button>
-          <button class="clean-account-tab" onclick="cleanPanel('estadisticas',this)">📊 Estadísticas</button>
-          <button class="clean-account-tab" onclick="cleanPanel('referido',this)">🎁 Referido</button>
-        </div>
+function searchPrive(q){
+  q = String(q || '').trim().toLowerCase();
+  const panels = Array.from(document.querySelectorAll('.prive-panel'));
+  const noResults = document.getElementById('priveNoResults');
 
-        <div class="clean-account-card active" id="clean-recompensas" data-search="recompensas estrellas puntos premio canje">
-          <h4>⭐ Recompensas</h4>
-          <div class="clean-account-stars" id="cleanStars">0</div>
-          <p>Estrellas acumuladas</p>
-          <p id="cleanNextReward" style="margin-top:1rem;color:var(--warm-gray);">Te faltan 10 estrellas para tu primer premio.</p>
-        </div>
+  document.querySelectorAll('.prive-tab').forEach(el => el.classList.remove('active'));
 
-        <div class="clean-account-card" id="clean-historial" data-search="historial pedidos compras decants perfume">
-          <h4>📦 Historial</h4>
-          <ul class="clean-account-list" id="cleanHistory"><li>Aún no hay pedidos registrados.</li></ul>
-        </div>
+  if(!q){
+    panels.forEach(el => {
+      el.classList.remove('active');
+      el.classList.remove('search-match');
+    });
+    document.getElementById('prive-recompensas')?.classList.add('active');
+    document.querySelector('.prive-tab')?.classList.add('active');
+    if(noResults) noResults.style.display = 'none';
+    return;
+  }
 
-        <div class="clean-account-card" id="clean-favoritos" data-search="favoritos wishlist perfumes guardados">
-          <h4>♡ Favoritos</h4>
-          <ul class="clean-account-list" id="cleanFavorites"><li>Aún no tienes favoritos.</li></ul>
-        </div>
+  let matches = 0;
 
-        <div class="clean-account-card" id="clean-perfil" data-search="perfil olfativo aroma notas gustos">
-          <h4>🏛 Perfil Olfativo</h4>
-          <div class="clean-tags" id="cleanProfile"><span>Sin datos todavía</span></div>
-        </div>
+  panels.forEach(panel => {
+    panel.classList.remove('active');
+    panel.classList.remove('search-match');
 
-        <div class="clean-account-card" id="clean-insignias" data-search="insignias logros rango coleccionista elite">
-          <h4>🏆 Insignias</h4>
-          <div class="clean-tags" id="cleanBadges"><span>🏛 Iniciado Athelier</span></div>
-        </div>
+    const text = (panel.innerText + ' ' + (panel.dataset.search || '')).toLowerCase();
+    if(text.includes(q)){
+      panel.classList.add('search-match');
+      matches++;
+    }
+  });
 
-        <div class="clean-account-card" id="clean-estadisticas" data-search="estadisticas perfumes ml descubiertos favorito">
-          <h4>📊 Estadísticas</h4>
-          <div class="clean-tags">
-            <span id="cleanStatPerfumes">0 perfumes probados</span>
-            <span id="cleanStatMl">0ml descubiertos</span>
-            <span id="cleanStatAroma">Aroma favorito: —</span>
-          </div>
-        </div>
+  if(noResults) noResults.style.display = matches ? 'none' : 'block';
+}
 
-        <div class="clean-account-card" id="clean-referido" data-search="referido codigo invitar amigos">
-          <h4>🎁 Código de Referido</h4>
-          <div class="clean-tags"><span id="cleanRefCode">Inicia sesión</span></div>
-          <button class="clean-account-primary" style="margin-top:1rem;" onclick="copyCleanRef()">Copiar código</button>
-          <p style="margin-top:1rem;color:var(--warm-gray);font-size:.72rem;">Recomendación: 2 estrellas para ambos cuando el referido haga su primera compra confirmada.</p>
-        </div>
+function copyPriveRef(){
+  const code = document.getElementById('priveRefCode')?.innerText || '';
+  if(!code || code === 'Inicia sesión'){
+    alert('Inicia sesión para generar tu código de referido.');
+    return;
+  }
+  navigator.clipboard.writeText(code);
+  alert('Código copiado: ' + code);
+}
 
-        <button class="clean-account-primary" style="margin-top:1.2rem;" onclick="cleanLogout()">Cerrar sesión</button>
-      </div>
-    </div>
-  </div>
-</div>
+function updatePriveVisual(profile){
+  const stars = Number(profile?.stars || 0);
+  const name = profile?.name || profile?.email || '';
+
+  const rank = stars >= 30 ? 'Olimpo' : stars >= 17 ? 'Élite' : stars >= 10 ? 'Coleccionista' : 'Iniciado';
+  const nextGoal = stars >= 30 ? 30 : stars >= 17 ? 30 : stars >= 10 ? 17 : 10;
+  const progress = Math.min((stars / nextGoal) * 100, 100);
+
+  const set = (id,val) => { const el = document.getElementById(id); if(el) el.textContent = val; };
+
+  set('priveRank', rank);
+  set('priveStarsTop', stars);
+  set('priveStarsMain', stars);
+
+  const progressEl = document.getElementById('priveProgress');
+  if(progressEl) progressEl.style.width = progress + '%';
+
+  const rankText = document.getElementById('priveRankText');
+  if(rankText) rankText.textContent = stars >= 30 ? 'Ya tienes premio máximo disponible.' : 'Sigue acumulando estrellas para subir de rango.';
+
+  const nextReward = document.getElementById('priveNextReward');
+  if(nextReward){
+    let msg = '';
+    if(stars >= 30) msg = 'Ya puedes canjear un decant gratis de 10ml.';
+    else if(stars >= 17) msg = 'Te faltan ' + (30 - stars) + ' estrellas para un decant de 10ml.';
+    else if(stars >= 10) msg = 'Te faltan ' + (17 - stars) + ' estrellas para un decant de 5ml.';
+    else msg = 'Te faltan ' + (10 - stars) + ' estrellas para un decant de 3ml.';
+    nextReward.textContent = msg;
+  }
+
+  const ref = document.getElementById('priveRefCode');
+  if(ref && name){
+    ref.textContent = 'ATH-' + String(name).slice(0,4).toUpperCase().replace(/\s/g,'') + '-' + (100 + stars);
+  }
+}
+</script>
 
 </body>
 </html>
