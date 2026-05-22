@@ -1012,6 +1012,347 @@ body.cart-open{
   margin-top:.2rem;
 }
 
+
+/* MI CUENTA PREMIUM CON BOTONES Y BUSCADOR */
+.account-premium-section{
+  padding:5rem 6%;
+  background:linear-gradient(180deg,#fdfaf5 0%,#f6f1ea 100%);
+}
+
+.account-premium-wrap{
+  max-width:1400px;
+  margin:auto;
+}
+
+.account-hero{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:2rem;
+  margin-bottom:2rem;
+  align-items:center;
+}
+
+.account-tag{
+  display:inline-block;
+  margin-bottom:1rem;
+  letter-spacing:.25rem;
+  font-size:.72rem;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+
+.account-hero h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4rem;
+  font-weight:300;
+  margin-bottom:1rem;
+}
+
+.account-hero p{
+  max-width:650px;
+  color:var(--warm-gray);
+  line-height:1.8;
+}
+
+.account-rank-card{
+  background:linear-gradient(145deg,#231f1b,#3a3129);
+  color:#fff;
+  border-radius:28px;
+  padding:2rem;
+  box-shadow:0 20px 60px rgba(0,0,0,.16);
+  border:1px solid rgba(184,149,106,.35);
+}
+
+.rank-label{
+  opacity:.7;
+  letter-spacing:.12rem;
+  font-size:.7rem;
+  text-transform:uppercase;
+}
+
+.account-rank-card h3{
+  margin:.7rem 0;
+  font-size:2rem;
+  letter-spacing:.18rem;
+}
+
+.rank-progress{
+  width:100%;
+  height:10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  overflow:hidden;
+  margin:1rem 0;
+}
+
+.rank-progress-fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--gold),#e8d1ae);
+  border-radius:999px;
+}
+
+.account-rank-card small{
+  color:rgba(255,255,255,.62);
+}
+
+.account-search{
+  position:relative;
+  margin:0 0 1.2rem;
+}
+
+.account-search svg{
+  position:absolute;
+  left:1rem;
+  top:50%;
+  transform:translateY(-50%);
+  width:18px;
+  height:18px;
+  stroke:var(--gold);
+}
+
+.account-search input{
+  width:100%;
+  padding:1rem 1rem 1rem 2.8rem;
+  border:1px solid rgba(184,149,106,.25);
+  background:rgba(255,255,255,.72);
+  border-radius:999px;
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.78rem;
+  outline:none;
+  color:var(--charcoal);
+  box-shadow:0 8px 28px rgba(0,0,0,.04);
+}
+
+.account-search input:focus{
+  border-color:var(--gold);
+}
+
+.account-tabs{
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+  margin:0 0 1.4rem;
+}
+
+.account-tab-btn{
+  border:1px solid rgba(184,149,106,.28);
+  background:rgba(255,255,255,.55);
+  padding:.85rem 1rem;
+  border-radius:999px;
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.66rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--warm-gray);
+  cursor:pointer;
+  transition:all .25s ease;
+}
+
+.account-tab-btn:hover,
+.account-tab-btn.active{
+  background:var(--charcoal);
+  color:#fff;
+  border-color:var(--charcoal);
+  transform:translateY(-1px);
+}
+
+.account-content{
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(184,149,106,.18);
+  border-radius:28px;
+  padding:2rem;
+  box-shadow:0 10px 35px rgba(0,0,0,.05);
+  min-height:330px;
+}
+
+.account-panel{
+  display:none;
+}
+
+.account-panel.active{
+  display:block;
+}
+
+.account-panel.search-match{
+  display:block;
+  border-bottom:1px solid rgba(184,149,106,.16);
+  padding-bottom:1.6rem;
+  margin-bottom:1.6rem;
+}
+
+.panel-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+  margin-bottom:1.2rem;
+}
+
+.panel-head h4{
+  font-size:1.1rem;
+  letter-spacing:.08rem;
+}
+
+.panel-head p{
+  font-size:.78rem;
+  color:var(--warm-gray);
+  line-height:1.7;
+  margin-top:.35rem;
+}
+
+.reward-big{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4rem;
+  font-weight:300;
+  color:var(--gold);
+}
+
+.reward-layout{
+  display:grid;
+  grid-template-columns:.65fr 1.35fr;
+  gap:1.2rem;
+  align-items:stretch;
+}
+
+.reward-next{
+  padding:1rem;
+  border-radius:16px;
+  background:#efe4d4;
+  line-height:1.6;
+}
+
+.account-list{
+  display:flex;
+  flex-direction:column;
+  gap:.9rem;
+  color:#5f554c;
+  list-style:none;
+}
+
+.account-list li{
+  padding:.9rem 1rem;
+  border-radius:16px;
+  background:#f5eee4;
+  border:1px solid rgba(184,149,106,.12);
+}
+
+.profile-tags,
+.badge-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+}
+
+.profile-tags span,
+.badge-grid span{
+  padding:.7rem 1rem;
+  border-radius:999px;
+  background:#efe4d4;
+  color:#6c5845;
+  font-size:.78rem;
+}
+
+.profile-note,
+.referral-note{
+  margin-top:1rem;
+  color:var(--warm-gray);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+}
+
+.stats-grid div{
+  padding:1rem;
+  border-radius:18px;
+  background:#f5eee4;
+}
+
+.stats-grid strong{
+  display:block;
+  font-size:1.3rem;
+  margin-bottom:.3rem;
+}
+
+.stats-grid span{
+  font-size:.78rem;
+  color:var(--warm-gray);
+}
+
+.referral-box{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.referral-box span{
+  padding:1rem 1.2rem;
+  border-radius:16px;
+  background:#efe4d4;
+  letter-spacing:.12rem;
+}
+
+.referral-box button{
+  border:none;
+  padding:1rem 1.2rem;
+  border-radius:16px;
+  background:#1f1b17;
+  color:#fff;
+  cursor:pointer;
+  font-family:'Josefin Sans',sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.65rem;
+}
+
+.account-no-results{
+  display:none;
+  padding:1.2rem;
+  border:1px dashed rgba(184,149,106,.35);
+  border-radius:18px;
+  color:var(--warm-gray);
+  text-align:center;
+}
+
+@media(max-width:900px){
+  .account-hero{
+    grid-template-columns:1fr;
+  }
+
+  .account-hero h2{
+    font-size:2.8rem;
+  }
+
+  .account-premium-section{
+    padding:3rem 1.2rem;
+  }
+
+  .account-rank-card,
+  .account-content{
+    border-radius:22px;
+    padding:1.4rem;
+  }
+
+  .stats-grid,
+  .reward-layout{
+    grid-template-columns:1fr;
+  }
+
+  .account-tabs{
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    padding-bottom:.4rem;
+  }
+
+  .account-tab-btn{
+    white-space:nowrap;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1291,6 +1632,94 @@ body.cart-open{
     </div>
   </div>
 </div>
+
+
+<section id="cuenta-premium" class="account-premium-section">
+  <div class="account-premium-wrap">
+    <div class="account-hero">
+      <div>
+        <span class="account-tag">ATHÉLIER PRIVÉ</span>
+        <h2>Mi Cuenta</h2>
+        <p>Tu espacio personal dentro de Athélier. Sigue tu progreso, recompensas y descubre tu perfil olfativo sin saturarte de información.</p>
+      </div>
+
+      <div class="account-rank-card">
+        <span class="rank-label">Rango actual</span>
+        <h3 id="accountRank">COLECCIONISTA</h3>
+        <p><span id="accountStarsTop">0</span> estrellas acumuladas</p>
+        <div class="rank-progress"><div class="rank-progress-fill" id="accountRankProgress" style="width:0%"></div></div>
+        <small id="accountRankText">Inicia sesión para ver tu progreso.</small>
+      </div>
+    </div>
+
+    <div class="account-search">
+      <svg fill="none" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7"></circle>
+        <path d="M20 20l-3.5-3.5"></path>
+      </svg>
+      <input id="accountSearchInput" type="text" placeholder="Buscar en mi cuenta: estrellas, favoritos, pedidos, perfil, referido..." oninput="searchAccountPanels(this.value)">
+    </div>
+
+    <div class="account-tabs">
+      <button class="account-tab-btn active" onclick="showAccountPanel('recompensas', this)">⭐ Recompensas</button>
+      <button class="account-tab-btn" onclick="showAccountPanel('historial', this)">📦 Historial</button>
+      <button class="account-tab-btn" onclick="showAccountPanel('favoritos', this)">♡ Favoritos</button>
+      <button class="account-tab-btn" onclick="showAccountPanel('perfil', this)">🏛 Perfil</button>
+      <button class="account-tab-btn" onclick="showAccountPanel('insignias', this)">🏆 Insignias</button>
+      <button class="account-tab-btn" onclick="showAccountPanel('estadisticas', this)">📊 Estadísticas</button>
+      <button class="account-tab-btn" onclick="showAccountPanel('referido', this)">🎁 Referido</button>
+    </div>
+
+    <div class="account-content">
+      <div class="account-no-results" id="accountNoResults">No encontré resultados en tu cuenta.</div>
+
+      <div class="account-panel active" id="panel-recompensas" data-search="recompensas estrellas puntos premio decant gratis canje">
+        <div class="panel-head"><div><h4>⭐ Recompensas</h4><p>Consulta tus estrellas y el siguiente premio disponible.</p></div></div>
+        <div class="reward-layout">
+          <div><div class="reward-big" id="accountStarsMain">0</div><p>Estrellas acumuladas</p></div>
+          <div class="reward-next" id="accountNextReward"><strong>Próximo premio:</strong><br>Inicia sesión para ver tu siguiente recompensa.</div>
+        </div>
+      </div>
+
+      <div class="account-panel" id="panel-historial" data-search="historial pedidos compras ordenes perfume decants">
+        <div class="panel-head"><div><h4>📦 Historial</h4><p>Tus pedidos recientes aparecerán aquí cuando estén registrados.</p></div></div>
+        <ul class="account-list" id="accountHistoryList"><li>Aún no hay pedidos registrados.</li></ul>
+      </div>
+
+      <div class="account-panel" id="panel-favoritos" data-search="favoritos wishlist guardar perfume deseo lista">
+        <div class="panel-head"><div><h4>♡ Favoritos</h4><p>Perfumes guardados para probar después.</p></div></div>
+        <ul class="account-list" id="accountFavoritesList"><li>Aún no tienes favoritos.</li></ul>
+      </div>
+
+      <div class="account-panel" id="panel-perfil" data-search="perfil olfativo aroma notas oriental dulce fresco nocturno avainillado">
+        <div class="panel-head"><div><h4>🏛 Perfil Olfativo</h4><p>Una lectura rápida de los estilos que más repites.</p></div></div>
+        <div class="profile-tags" id="accountProfileTags"><span>Sin datos todavía</span></div>
+        <p class="profile-note">Se actualizará con tus compras recientes.</p>
+      </div>
+
+      <div class="account-panel" id="panel-insignias" data-search="insignias logros rango cliente elite coleccionista">
+        <div class="panel-head"><div><h4>🏆 Insignias</h4><p>Logros desbloqueados según tus compras y preferencias.</p></div></div>
+        <div class="badge-grid" id="accountBadges"><span>🏛 Iniciado Athelier</span></div>
+      </div>
+
+      <div class="account-panel" id="panel-estadisticas" data-search="estadisticas resumen perfumes probados mililitros aroma favorito">
+        <div class="panel-head"><div><h4>📊 Estadísticas</h4><p>Resumen visual de tu experiencia con Athélier.</p></div></div>
+        <div class="stats-grid">
+          <div><strong id="statPerfumes">0</strong><span>Perfumes probados</span></div>
+          <div><strong id="statMl">0ml</strong><span>Descubiertos</span></div>
+          <div><strong id="statAroma">—</strong><span>Aroma favorito</span></div>
+          <div><strong id="statTop">—</strong><span>Más comprado</span></div>
+        </div>
+      </div>
+
+      <div class="account-panel" id="panel-referido" data-search="referido codigo invitar amigos estrellas extra">
+        <div class="panel-head"><div><h4>🎁 Código de Referido</h4><p>Comparte tu código y gana estrellas cuando tu referido compre.</p></div></div>
+        <div class="referral-box"><span id="refCode">Inicia sesión</span><button onclick="copyReferral()">Copiar código</button></div>
+        <p class="referral-note">Recomendación: 2 estrellas para ambos cuando el referido haga su primera compra confirmada.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="fgrid">
