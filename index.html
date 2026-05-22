@@ -3143,5 +3143,156 @@ function updatePriveVisual(profile){
 }
 </script>
 
+
+<script type="module">
+import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+import { getFirestore, doc, getDoc, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+const priveFirebaseConfig = {
+  apiKey: "AIzaSyArNz6pCv_qfjivJ8Dl9e0wvFk2UMz3uc0",
+  authDomain: "athelierdecants1.firebaseapp.com",
+  projectId: "athelierdecants1",
+  storageBucket: "athelierdecants1.firebasestorage.app",
+  messagingSenderId: "797940766816",
+  appId: "1:797940766816:web:dd9304d40c54ad1623cb05",
+  measurementId: "G-33GX1ZWZXZ"
+};
+
+const priveApp = getApps().length ? getApps()[0] : initializeApp(priveFirebaseConfig);
+const priveAuth = getAuth(priveApp);
+const priveDb = getFirestore(priveApp);
+
+function setText(id, value){
+  const el = document.getElementById(id);
+  if(el) el.textContent = value;
+}
+
+function setHTML(id, value){
+  const el = document.getElementById(id);
+  if(el) el.innerHTML = value;
+}
+
+function calcRank(stars){
+  if(stars >= 30) return {rank:'Olimpo', next:30, text:'Ya tienes premio máximo disponible.'};
+  if(stars >= 17) return {rank:'Élite', next:30, text:`Te faltan ${30-stars} estrellas para Olimpo.`};
+  if(stars >= 10) return {rank:'Coleccionista', next:17, text:`Te faltan ${17-stars} estrellas para Élite.`};
+  return {rank:'Iniciado', next:10, text:`Te faltan ${10-stars} estrellas para Coleccionista.`};
+}
+
+function nextReward(stars){
+  if(stars >= 30) return 'Ya puedes canjear un decant gratis de 10ml.';
+  if(stars >= 17) return `Te faltan ${30-stars} estrellas para un decant de 10ml.`;
+  if(stars >= 10) return `Te faltan ${17-stars} estrellas para un decant de 5ml.`;
+  return `Te faltan ${10-stars} estrellas para un decant de 3ml.`;
+}
+
+async function loadPriveForUser(user){
+  const userSnap = await getDoc(doc(priveDb, 'users', user.uid));
+  const profile = userSnap.exists() ? userSnap.data() : {};
+  const stars = Number(profile.stars || 0);
+  const name = profile.name || user.email?.split('@')[0] || 'Cliente';
+  const rankInfo = calcRank(stars);
+
+  setText('priveRank', rankInfo.rank);
+  setText('priveStarsTop', stars);
+  setText('priveStarsMain', stars);
+  setText('priveRankText', rankInfo.text);
+  setText('priveNextReward', nextReward(stars));
+
+  const progress = Math.min((stars / rankInfo.next) * 100, 100);
+  const progressEl = document.getElementById('priveProgress');
+  if(progressEl) progressEl.style.width = progress + '%';
+
+  setText('priveRefCode', 'ATH-' + String(name).slice(0,4).toUpperCase().replace(/\s/g,'') + '-' + (100 + stars));
+
+  try{
+    const qPurchases = query(collection(priveDb, 'purchases'), where('uid', '==', user.uid));
+    const res = await getDocs(qPurchases);
+
+    if(res.empty){
+      setHTML('priveHistory', '<li>Aún no hay pedidos registrados.</li>');
+      setText('priveStatPerfumes', '0');
+      setText('priveStatMl', '0ml');
+      setText('priveStatTop', '—');
+      setText('priveStatAroma', '—');
+    }else{
+      let rows = [];
+      let perfumeSet = new Set();
+      let totalMl = 0;
+      let names = {};
+
+      res.forEach(docu => {
+        const p = docu.data();
+        const status = p.status === 'approved' ? 'Aprobado' : p.status === 'rejected' ? 'Rechazado' : 'Pendiente';
+        const items = p.items || [];
+
+        items.forEach(item => {
+          const itemName = item.name || item.nombre || 'Producto';
+          const qty = Number(item.qty || item.quantity || item.cantidad || 1);
+          const size = String(item.size || item.ml || '');
+          perfumeSet.add(itemName);
+          names[itemName] = (names[itemName] || 0) + qty;
+          const ml = parseInt(size.replace(/[^0-9]/g,'')) || 0;
+          totalMl += ml * qty;
+        });
+
+        const itemText = items.map(i => {
+          const qty = Number(i.qty || i.quantity || i.cantidad || 1);
+          return `${i.name || i.nombre || 'Producto'} ${i.size || i.ml || ''} x${qty}`;
+        }).join(', ');
+
+        rows.push(`<li><strong>${status}</strong> · ${itemText || 'Sin detalle'} · ${p.stars || 0} estrellas</li>`);
+      });
+
+      setHTML('priveHistory', rows.join(''));
+      setText('priveStatPerfumes', perfumeSet.size);
+      setText('priveStatMl', totalMl + 'ml');
+
+      const topName = Object.entries(names).sort((a,b)=>b[1]-a[1])[0]?.[0] || '—';
+      setText('priveStatTop', topName);
+
+      // Perfil simple por texto de productos
+      const allNames = Object.keys(names).join(' ').toLowerCase();
+      let aroma = '—';
+      if(allNames.includes('halloween') || allNames.includes('9pm')) aroma = 'Dulce';
+      else if(allNames.includes('hawas') || allNames.includes('aqua') || allNames.includes('ice')) aroma = 'Fresco';
+      else if(allNames.includes('oud') || allNames.includes('santal')) aroma = 'Oriental';
+      setText('priveStatAroma', aroma);
+
+      const profileTags = aroma === '—'
+        ? '<span>Sin datos todavía</span>'
+        : `<span>${aroma}</span><span>Basado en compras</span>`;
+      setHTML('priveProfile', profileTags);
+    }
+  }catch(err){
+    console.error('Error Privé:', err);
+    setHTML('priveHistory', '<li>No se pudo cargar el historial.</li>');
+  }
+
+  const badges = [];
+  badges.push('<span>🏛 Iniciado Athelier</span>');
+  if(stars >= 10) badges.push('<span>⭐ Coleccionista</span>');
+  if(stars >= 17) badges.push('<span>🏆 Cliente Élite</span>');
+  if(stars >= 30) badges.push('<span>☀ Olimpo</span>');
+  setHTML('priveBadges', badges.join(''));
+}
+
+onAuthStateChanged(priveAuth, async user => {
+  if(user){
+    await loadPriveForUser(user);
+  }else{
+    setText('priveRank', 'Iniciado');
+    setText('priveStarsTop', '0');
+    setText('priveStarsMain', '0');
+    setText('priveRankText', 'Inicia sesión para ver tu progreso.');
+    setText('priveNextReward', 'Inicia sesión para ver tu siguiente recompensa.');
+    setText('priveRefCode', 'Inicia sesión');
+    const progressEl = document.getElementById('priveProgress');
+    if(progressEl) progressEl.style.width = '0%';
+  }
+});
+</script>
+
 </body>
 </html>
