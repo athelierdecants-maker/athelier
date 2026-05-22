@@ -903,6 +903,115 @@ body.cart-open{
   }
 }
 
+
+/* BOTÓN FLOTANTE CARRITO */
+.cart-float{
+  position:fixed;
+  right:22px;
+  bottom:98px;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#2a2520,#4d4034);
+  border:1px solid rgba(184,149,106,.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:6000;
+  box-shadow:0 12px 35px rgba(0,0,0,.24);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.cart-float:hover{
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 16px 45px rgba(0,0,0,.3);
+}
+
+.cart-float svg{
+  width:28px;
+  height:28px;
+  stroke:#fdfaf5;
+  stroke-width:1.8;
+}
+
+.cart-count-float{
+  position:absolute;
+  top:-4px;
+  right:-4px;
+  min-width:24px;
+  height:24px;
+  padding:0 6px;
+  border-radius:999px;
+  background:var(--gold);
+  color:var(--charcoal);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:.62rem;
+  font-weight:600;
+  border:2px solid var(--white);
+}
+
+@media(max-width:768px){
+  .cart-float{
+    right:16px;
+    bottom:88px;
+    width:58px;
+    height:58px;
+  }
+}
+
+
+/* CONTROLES DE CANTIDAD EN CARRITO */
+.citem{
+  align-items:center !important;
+}
+
+.cinfo{
+  flex:1 !important;
+  min-width:0 !important;
+}
+
+.cart-qty-controls{
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+  margin:.45rem 0;
+}
+
+.cart-qty-btn{
+  width:28px;
+  height:28px;
+  border:1px solid rgba(184,149,106,.45);
+  background:transparent;
+  color:var(--charcoal);
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.9rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.cart-qty-btn:hover{
+  background:var(--gold);
+  color:#fff;
+  border-color:var(--gold);
+}
+
+.cart-qty-num{
+  min-width:28px;
+  text-align:center;
+  font-size:.68rem;
+  color:var(--charcoal);
+}
+
+.cirem{
+  display:inline-block !important;
+  margin-top:.2rem;
+}
+
 </style>
 </head>
 <body>
@@ -2353,6 +2462,173 @@ window.addEventListener('load', () => {
 
   window.openCart = openCartMobileSafe;
   window.closeCart = closeCartMobileSafe;
+})();
+</script>
+
+
+<button class="cart-float" onclick="openCart()" aria-label="Abrir carrito">
+  <div class="cart-count-float" id="cartFloatCount">0</div>
+  <svg fill="none" viewBox="0 0 24 24">
+    <path d="M3 5h2l2.2 9.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 8H7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="19" r="1.5"/>
+    <circle cx="17" cy="19" r="1.5"/>
+  </svg>
+</button>
+
+
+<script>
+(function(){
+  function updateFloatingCartCount(){
+    var countEl = document.getElementById('cartFloatCount');
+    if(!countEl) return;
+
+    var cart = window.cart || window.CART || [];
+    var total = 0;
+
+    if(Array.isArray(cart)){
+      cart.forEach(function(item){
+        total += Number(item.qty || item.quantity || item.cantidad || 1);
+      });
+    }
+
+    countEl.textContent = total;
+  }
+
+  const originalRenderCart = window.renderCart;
+
+  if(typeof originalRenderCart === 'function'){
+    window.renderCart = function(){
+      originalRenderCart();
+      updateFloatingCartCount();
+    }
+  }
+
+  window.addEventListener('load', updateFloatingCartCount);
+
+  setInterval(updateFloatingCartCount, 1200);
+})();
+</script>
+
+
+<script>
+(function(){
+  function getCartArray(){
+    if(Array.isArray(window.cart)) return window.cart;
+    if(Array.isArray(window.CART)) return window.CART;
+    window.cart = [];
+    return window.cart;
+  }
+
+  function getItemQty(item){
+    return Number(item.qty || item.quantity || item.cantidad || 1);
+  }
+
+  function setItemQty(item, qty){
+    item.qty = qty;
+    item.quantity = qty;
+    item.cantidad = qty;
+  }
+
+  function getItemPrice(item){
+    return Number(item.price || item.precio || item.total || item.p || 0);
+  }
+
+  function getItemName(item){
+    return item.name || item.nombre || item.title || 'Producto';
+  }
+
+  function getItemSize(item){
+    return item.size || item.ml || item.tamano || item.option || '';
+  }
+
+  function getItemImg(item){
+    return item.img || item.image || item.imagen || '';
+  }
+
+  function money(n){
+    return '$' + Number(n || 0).toLocaleString('es-MX') + ' MXN';
+  }
+
+  window.changeCartQty = function(index, delta){
+    const cart = getCartArray();
+    if(!cart[index]) return;
+
+    const current = getItemQty(cart[index]);
+    const next = current + delta;
+
+    if(next <= 0){
+      cart.splice(index, 1);
+    }else{
+      setItemQty(cart[index], next);
+    }
+
+    window.renderCart();
+  }
+
+  window.removeCartItem = function(index){
+    const cart = getCartArray();
+    if(!cart[index]) return;
+    cart.splice(index, 1);
+    window.renderCart();
+  }
+
+  window.renderCart = function(){
+    const cart = getCartArray();
+    const container = document.getElementById('cartItems');
+    const totalEl = document.getElementById('cartTotal');
+    const floatCount = document.getElementById('cartFloatCount');
+
+    if(!container) return;
+
+    if(cart.length === 0){
+      container.innerHTML = '<p class="cempty">Tu carrito está vacío.</p>';
+      if(totalEl) totalEl.textContent = '$0 MXN';
+      if(floatCount) floatCount.textContent = '0';
+      return;
+    }
+
+    let total = 0;
+    let count = 0;
+
+    container.innerHTML = cart.map((item, index) => {
+      const qty = getItemQty(item);
+      const price = getItemPrice(item);
+      const subtotal = price * qty;
+      const img = getItemImg(item);
+      total += subtotal;
+      count += qty;
+
+      return `
+        <div class="citem">
+          <div class="cthumb">
+            ${img ? `<img src="${img}" alt="${getItemName(item)}">` : ''}
+          </div>
+          <div class="cinfo">
+            <div class="ciname">${getItemName(item)}</div>
+            <div class="ciprice">${getItemSize(item)} · ${money(price)} c/u</div>
+
+            <div class="cart-qty-controls">
+              <button class="cart-qty-btn" onclick="changeCartQty(${index},-1)">−</button>
+              <span class="cart-qty-num">${qty}</span>
+              <button class="cart-qty-btn" onclick="changeCartQty(${index},1)">+</button>
+            </div>
+
+            <div class="ciprice"><strong>Subtotal:</strong> ${money(subtotal)}</div>
+            <button class="cirem" onclick="removeCartItem(${index})">Eliminar</button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    if(totalEl) totalEl.textContent = money(total);
+    if(floatCount) floatCount.textContent = count;
+  }
+
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      if(typeof window.renderCart === 'function') window.renderCart();
+    }, 300);
+  });
 })();
 </script>
 
