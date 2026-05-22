@@ -3061,5 +3061,43 @@ window.addEventListener('load', () => {
 })();
 </script>
 
+
+<script>
+(function(){
+  const originalOpenAccountModal = window.openAccountModal;
+
+  window.openAccountModal = function(){
+    const modal = document.getElementById('accountModal');
+
+    if(modal){
+      modal.classList.add('open');
+      modal.style.display = 'flex';
+      return;
+    }
+
+    if(typeof originalOpenAccountModal === 'function'){
+      originalOpenAccountModal();
+      return;
+    }
+
+    const section = document.getElementById('cuenta-premium');
+    if(section){
+      section.scrollIntoView({behavior:'smooth', block:'start'});
+      return;
+    }
+
+    alert('No se encontró la sección Mi Cuenta.');
+  };
+
+  window.closeAccountModal = window.closeAccountModal || function(){
+    const modal = document.getElementById('accountModal');
+    if(modal){
+      modal.classList.remove('open');
+      modal.style.display = 'none';
+    }
+  };
+})();
+</script>
+
 </body>
 </html>
