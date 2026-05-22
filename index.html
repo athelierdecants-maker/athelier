@@ -1353,6 +1353,224 @@ body.cart-open{
   }
 }
 
+
+/* MODAL MI CUENTA LIMPIO */
+.clean-account-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:120000;
+  background:rgba(0,0,0,.62);
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+
+.clean-account-modal.open{
+  display:flex !important;
+}
+
+.clean-account-panel{
+  width:100%;
+  max-width:980px;
+  max-height:92dvh;
+  overflow:auto;
+  background:var(--white);
+  border:1px solid rgba(184,149,106,.35);
+  box-shadow:0 28px 90px rgba(0,0,0,.32);
+}
+
+.clean-account-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:var(--charcoal);
+  color:#fff;
+  padding:1rem 1.3rem;
+  position:sticky;
+  top:0;
+  z-index:2;
+}
+
+.clean-account-head h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.45rem;
+  font-weight:300;
+}
+
+.clean-account-head button{
+  background:none;
+  border:none;
+  color:#fff;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+.clean-account-body{
+  padding:1.4rem;
+}
+
+.clean-account-login{
+  display:grid;
+  gap:.75rem;
+  max-width:430px;
+  margin:0 auto;
+}
+
+.clean-account-login input{
+  width:100%;
+  padding:.85rem;
+  border:1px solid var(--sand);
+  font-family:'Josefin Sans',sans-serif;
+  outline:none;
+}
+
+.clean-account-login button,
+.clean-account-primary{
+  width:100%;
+  padding:.9rem;
+  background:var(--charcoal);
+  color:#fff;
+  border:none;
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.64rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+.clean-account-primary:hover,
+.clean-account-login button:hover{
+  background:var(--gold);
+}
+
+.clean-account-dashboard{
+  display:none;
+}
+
+.clean-account-dashboard.active{
+  display:block;
+}
+
+.clean-account-msg{
+  margin-top:.8rem;
+  color:var(--warm-gray);
+  font-size:.72rem;
+  line-height:1.6;
+  text-align:center;
+}
+
+.clean-account-tabs{
+  display:flex;
+  gap:.7rem;
+  flex-wrap:wrap;
+  margin:1rem 0 1.3rem;
+}
+
+.clean-account-tab{
+  border:1px solid rgba(184,149,106,.28);
+  background:rgba(245,240,232,.65);
+  padding:.75rem .9rem;
+  border-radius:999px;
+  font-family:'Josefin Sans',sans-serif;
+  font-size:.58rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--warm-gray);
+  cursor:pointer;
+}
+
+.clean-account-tab.active{
+  background:var(--charcoal);
+  color:#fff;
+  border-color:var(--charcoal);
+}
+
+.clean-account-search{
+  position:relative;
+}
+
+.clean-account-search input{
+  width:100%;
+  padding:.9rem 1rem;
+  border:1px solid rgba(184,149,106,.28);
+  border-radius:999px;
+  font-family:'Josefin Sans',sans-serif;
+  outline:none;
+}
+
+.clean-account-card{
+  display:none;
+  border:1px solid rgba(184,149,106,.18);
+  background:rgba(245,240,232,.45);
+  padding:1.2rem;
+  margin-top:1rem;
+}
+
+.clean-account-card.active,
+.clean-account-card.search-match{
+  display:block;
+}
+
+.clean-account-card h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;
+  font-weight:300;
+  margin-bottom:.7rem;
+}
+
+.clean-account-stars{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.2rem;
+  color:var(--gold);
+  line-height:1;
+}
+
+.clean-account-list{
+  list-style:none;
+  display:grid;
+  gap:.65rem;
+}
+
+.clean-account-list li{
+  background:#fff;
+  border:1px solid rgba(184,149,106,.14);
+  padding:.8rem;
+  color:var(--warm-gray);
+  font-size:.72rem;
+}
+
+.clean-tags{
+  display:flex;
+  gap:.55rem;
+  flex-wrap:wrap;
+}
+
+.clean-tags span{
+  background:#fff;
+  border:1px solid rgba(184,149,106,.18);
+  padding:.55rem .8rem;
+  border-radius:999px;
+  color:var(--warm-gray);
+  font-size:.68rem;
+}
+
+@media(max-width:768px){
+  .clean-account-panel{
+    max-height:100dvh;
+    height:100dvh;
+  }
+
+  .clean-account-tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+  }
+
+  .clean-account-tab{
+    white-space:nowrap;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1375,7 +1593,7 @@ body.cart-open{
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <div class="nav-icons">
-      <button class="account-btn" onclick="openAccountModal()">Mi cuenta</button>
+      <button class="account-btn" onclick="openCleanAccount()">Mi cuenta</button>
       <button class="account-btn admin-nav-btn" id="adminNavBtn" onclick="openAdminModal()" style="display:inline-block;">Admin</button>
       <svg onclick="openCart()" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
       <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
@@ -3062,42 +3280,90 @@ window.addEventListener('load', () => {
 </script>
 
 
-<script>
-(function(){
-  const originalOpenAccountModal = window.openAccountModal;
+<div class="clean-account-modal" id="cleanAccountModal" onclick="if(event.target===this)closeCleanAccount()">
+  <div class="clean-account-panel">
+    <div class="clean-account-head">
+      <h3>Mi Cuenta Athelier</h3>
+      <button onclick="closeCleanAccount()">×</button>
+    </div>
 
-  window.openAccountModal = function(){
-    const modal = document.getElementById('accountModal');
+    <div class="clean-account-body">
+      <div id="cleanAuthBox">
+        <div class="clean-account-login">
+          <input id="cleanEmail" type="email" placeholder="Correo electrónico">
+          <input id="cleanPass" type="password" placeholder="Contraseña">
+          <button onclick="cleanLogin()">Iniciar sesión</button>
+          <button onclick="cleanRegister()" style="background:var(--gold);">Crear cuenta</button>
+          <p class="clean-account-msg" id="cleanMsg">Inicia sesión para ver tus estrellas, recompensas e historial.</p>
+        </div>
+      </div>
 
-    if(modal){
-      modal.classList.add('open');
-      modal.style.display = 'flex';
-      return;
-    }
+      <div id="cleanDashboard" class="clean-account-dashboard">
+        <p class="sec-sub" style="text-align:left;">ATHÉLIER PRIVÉ</p>
+        <h2 class="sec-title" style="text-align:left;">Mi Cuenta</h2>
 
-    if(typeof originalOpenAccountModal === 'function'){
-      originalOpenAccountModal();
-      return;
-    }
+        <div class="clean-account-search">
+          <input id="cleanSearch" oninput="cleanSearchPanels(this.value)" placeholder="🔍 Buscar: recompensas, historial, favoritos, perfil, referido...">
+        </div>
 
-    const section = document.getElementById('cuenta-premium');
-    if(section){
-      section.scrollIntoView({behavior:'smooth', block:'start'});
-      return;
-    }
+        <div class="clean-account-tabs">
+          <button class="clean-account-tab active" onclick="cleanPanel('recompensas',this)">⭐ Recompensas</button>
+          <button class="clean-account-tab" onclick="cleanPanel('historial',this)">📦 Historial</button>
+          <button class="clean-account-tab" onclick="cleanPanel('favoritos',this)">♡ Favoritos</button>
+          <button class="clean-account-tab" onclick="cleanPanel('perfil',this)">🏛 Perfil</button>
+          <button class="clean-account-tab" onclick="cleanPanel('insignias',this)">🏆 Insignias</button>
+          <button class="clean-account-tab" onclick="cleanPanel('estadisticas',this)">📊 Estadísticas</button>
+          <button class="clean-account-tab" onclick="cleanPanel('referido',this)">🎁 Referido</button>
+        </div>
 
-    alert('No se encontró la sección Mi Cuenta.');
-  };
+        <div class="clean-account-card active" id="clean-recompensas" data-search="recompensas estrellas puntos premio canje">
+          <h4>⭐ Recompensas</h4>
+          <div class="clean-account-stars" id="cleanStars">0</div>
+          <p>Estrellas acumuladas</p>
+          <p id="cleanNextReward" style="margin-top:1rem;color:var(--warm-gray);">Te faltan 10 estrellas para tu primer premio.</p>
+        </div>
 
-  window.closeAccountModal = window.closeAccountModal || function(){
-    const modal = document.getElementById('accountModal');
-    if(modal){
-      modal.classList.remove('open');
-      modal.style.display = 'none';
-    }
-  };
-})();
-</script>
+        <div class="clean-account-card" id="clean-historial" data-search="historial pedidos compras decants perfume">
+          <h4>📦 Historial</h4>
+          <ul class="clean-account-list" id="cleanHistory"><li>Aún no hay pedidos registrados.</li></ul>
+        </div>
+
+        <div class="clean-account-card" id="clean-favoritos" data-search="favoritos wishlist perfumes guardados">
+          <h4>♡ Favoritos</h4>
+          <ul class="clean-account-list" id="cleanFavorites"><li>Aún no tienes favoritos.</li></ul>
+        </div>
+
+        <div class="clean-account-card" id="clean-perfil" data-search="perfil olfativo aroma notas gustos">
+          <h4>🏛 Perfil Olfativo</h4>
+          <div class="clean-tags" id="cleanProfile"><span>Sin datos todavía</span></div>
+        </div>
+
+        <div class="clean-account-card" id="clean-insignias" data-search="insignias logros rango coleccionista elite">
+          <h4>🏆 Insignias</h4>
+          <div class="clean-tags" id="cleanBadges"><span>🏛 Iniciado Athelier</span></div>
+        </div>
+
+        <div class="clean-account-card" id="clean-estadisticas" data-search="estadisticas perfumes ml descubiertos favorito">
+          <h4>📊 Estadísticas</h4>
+          <div class="clean-tags">
+            <span id="cleanStatPerfumes">0 perfumes probados</span>
+            <span id="cleanStatMl">0ml descubiertos</span>
+            <span id="cleanStatAroma">Aroma favorito: —</span>
+          </div>
+        </div>
+
+        <div class="clean-account-card" id="clean-referido" data-search="referido codigo invitar amigos">
+          <h4>🎁 Código de Referido</h4>
+          <div class="clean-tags"><span id="cleanRefCode">Inicia sesión</span></div>
+          <button class="clean-account-primary" style="margin-top:1rem;" onclick="copyCleanRef()">Copiar código</button>
+          <p style="margin-top:1rem;color:var(--warm-gray);font-size:.72rem;">Recomendación: 2 estrellas para ambos cuando el referido haga su primera compra confirmada.</p>
+        </div>
+
+        <button class="clean-account-primary" style="margin-top:1.2rem;" onclick="cleanLogout()">Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
