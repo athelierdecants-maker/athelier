@@ -104,7 +104,7 @@ isolation:isolate;
 .cfbtn{padding:0.52rem 1.3rem;font-family:'Josefin Sans',sans-serif;font-size:0.63rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid var(--sand);background:none;color:var(--warm-gray);cursor:pointer;transition:all .3s;}
 .cfbtn:hover{border-color:var(--gold);color:var(--gold);}
 .cfbtn.on{background:var(--charcoal);color:#fff;border-color:var(--charcoal);}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.1rem;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.1rem;}
 .pcard{
 background:rgba(255,255,255,0.55);
 border:1px solid rgba(184,149,106,0.12);
@@ -151,8 +151,9 @@ transition:transform .35s ease;
 .pinfo{padding:0.9rem;}
 .pname{font-family:'Cormorant Garamond',serif;font-size:0.88rem;}
 .ptype{font-size:0.56rem;letter-spacing:0.08em;color:var(--warm-gray);margin:0.2rem 0;text-transform:uppercase;}
-.popts{display:flex;gap:0.3rem;margin-top:0.5rem;flex-wrap:wrap;}
-.ptag{padding:0.26rem 0.48rem;font-size:0.54rem;border:1px solid var(--sand);color:var(--warm-gray);cursor:pointer;transition:all .3s;background:none;font-family:'Josefin Sans',sans-serif;}
+.popts{display:grid;grid-template-columns:repeat(3,1fr);gap:0.35rem;margin-top:0.5rem;}
+.ptag{padding:0.34rem 0.32rem;font-size:0.54rem;border:1px solid var(--sand);color:var(--warm-gray);cursor:pointer;transition:all .3s;background:none;font-family:'Josefin Sans',sans-serif;text-align:center;white-space:nowrap;}
+.ptag-mid{grid-column:2 / 3;}
 .ptag:hover,.ptag.sel{background:var(--gold);color:#fff;border-color:var(--gold);}
 .padd{width:100%;padding:0.62rem;margin-top:0.65rem;background:transparent;border:1px solid rgba(184,149,106,0.35);color:var(--gold);font-family:'Josefin Sans',sans-serif;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;transition:all .3s;}
 .padd:hover{background:var(--gold);color:#fff;}
@@ -2763,6 +2764,95 @@ footer .footer-grid,
   }
 }
 
+
+/* RESEÑAS */
+.reviews-section{
+  background:#28211c;
+  padding:5rem 3rem;
+  color:var(--white);
+}
+.reviews-header{
+  text-align:center;
+  margin-bottom:3rem;
+}
+.reviews-header p{
+  font-size:.75rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  margin-bottom:1rem;
+}
+.reviews-header h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;
+  font-weight:300;
+  color:var(--white);
+  margin-bottom:.8rem;
+}
+.reviews-header span{
+  display:block;
+  width:52px;
+  height:1px;
+  background:var(--gold);
+  margin:0 auto;
+}
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.4rem;
+  max-width:1500px;
+  margin:0 auto;
+}
+.review-card{
+  border:1px solid rgba(184,149,106,.24);
+  background:rgba(255,255,255,.035);
+  padding:1.7rem;
+  min-height:165px;
+}
+.review-top{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:1.4rem;
+}
+.review-avatar{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:var(--sand);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.65rem;
+}
+.review-card h3{
+  font-size:.72rem;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:.25rem;
+}
+.review-stars{
+  color:var(--gold);
+  font-size:.8rem;
+  letter-spacing:.08em;
+}
+.review-card p{
+  color:rgba(255,255,255,.62);
+  font-size:.85rem;
+  line-height:1.7;
+  font-style:italic;
+  font-weight:600;
+}
+@media(max-width:1000px){
+  .reviews-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:620px){
+  .reviews-section{padding:3.5rem 1.2rem;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .reviews-header h2{font-size:2.4rem;}
+}
+
 </style>
 </head>
 <body>
@@ -2791,7 +2881,6 @@ footer .footer-grid,
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#perfumes">Decants</a></li>
-      <li><a href="#perfumes-completos">Perfumes</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#recompensas">Recompensas</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -2830,7 +2919,6 @@ footer .footer-grid,
   <button class="nav-mobile-close" onclick="toggleMenu()">×</button>
   <a href="#inicio" onclick="toggleMenu()">Inicio</a>
   <a href="#perfumes" onclick="toggleMenu()">Decants</a>
-  <a href="#perfumes-completos" onclick="toggleMenu()">Perfumes</a>
   <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
   <a href="#recompensas" onclick="toggleMenu()">Recompensas</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
@@ -2912,10 +3000,10 @@ footer .footer-grid,
 <section class="about-compact-section" id="nosotros">
   <div class="about-compact-wrap">
     <div class="about-compact-main">
-      <p class="about-kicker">Sobre Athélier</p>
-      <h2>Decants originales, elegancia y prueba inteligente.</h2>
+      <p class="about-kicker">Sobre Nosotros</p>
+      <h2>Quiénes somos en Athélier.</h2>
       <p>
-        En Athélier seleccionamos fragancias originales y las preparamos en decants de 3, 5 y 10 ml para que descubras tu esencia antes de invertir en un frasco completo.
+        Somos un proyecto dedicado a acercarte fragancias originales de una forma más práctica, elegante y accesible. En Athélier preparamos decants con cuidado para que puedas conocer distintos perfumes, probarlos en tu día a día y elegir con seguridad el aroma que mejor va contigo.
       </p>
       <a href="#contacto" class="about-compact-btn">Más información</a>
     </div>
@@ -2932,18 +3020,57 @@ footer .footer-grid,
 </section>
 
 
-<section class="full-perfumes-section" id="perfumes-completos">
-  <div class="full-perfumes-wrap">
-    <div class="full-perfumes-head">
-      <p>Frascos completos</p>
-      <h2>Perfumes completos</h2>
-      <span>Consulta disponibilidad y precio final. Referencia: 100ml desde $800 MXN.</span>
-    </div>
-    <div class="pgrid full-perfumes-grid">
-      
-      <div class="full-perfume-card"><div class="full-perfume-img"></div><h3>Perfume completo</h3><p>100ml · $800 MXN</p><button>Consultar</button></div>
-    
-    </div>
+<section class="reviews-section" id="resenas">
+  <div class="reviews-header">
+    <p>Lo que dicen nuestros clientes</p>
+    <h2>Reseñas</h2>
+    <span></span>
+  </div>
+
+  <div class="reviews-grid">
+    <article class="review-card">
+      <div class="review-top">
+        <div class="review-avatar">👨🏿</div>
+        <div>
+          <h3>Gabriel E.</h3>
+          <div class="review-stars">★★★★★</div>
+        </div>
+      </div>
+      <p>"Excelente producto todo excelente con el envío 100%"</p>
+    </article>
+
+    <article class="review-card">
+      <div class="review-top">
+        <div class="review-avatar">👨🏻‍🦰</div>
+        <div>
+          <h3>Alberto A.</h3>
+          <div class="review-stars">★★★★★</div>
+        </div>
+      </div>
+      <p>"Todo perfecto muy puntual con el envío"</p>
+    </article>
+
+    <article class="review-card">
+      <div class="review-top">
+        <div class="review-avatar">👩🏻</div>
+        <div>
+          <h3>Didier M.</h3>
+          <div class="review-stars">★★★★★</div>
+        </div>
+      </div>
+      <p>"Muy bien servicio y las entregas son muy rápidas"</p>
+    </article>
+
+    <article class="review-card">
+      <div class="review-top">
+        <div class="review-avatar">👩🏽</div>
+        <div>
+          <h3>Iván H.</h3>
+          <div class="review-stars">★★★★★</div>
+        </div>
+      </div>
+      <p>"Excelente servicio y buena calidad"</p>
+    </article>
   </div>
 </section>
 
@@ -3430,6 +3557,7 @@ function renderProducts(){
     h+='<button class="ptag sel" onclick="sMl(this,'+p.id+','+p.ml3+',\'3ml\')">3ml $'+p.ml3+'</button>';
     h+='<button class="ptag" onclick="sMl(this,'+p.id+','+p.ml5+',\'5ml\')">5ml $'+p.ml5+'</button>';
     h+='<button class="ptag" onclick="sMl(this,'+p.id+','+p.ml10+',\'10ml\')">10ml $'+p.ml10+'</button>';
+    h+='<button class="ptag ptag-mid" onclick="sMl(this,'+p.id+',800,\'100ml\')">100ml $800</button>';
     h+='</div>';
     h+='<button class="padd" onclick="addToCart('+p.id+')">+ Agregar</button>';
     h+='</div></div>';
