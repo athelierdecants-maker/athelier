@@ -39,7 +39,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(253,250,245
 .hero-tag{font-size:0.62rem;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:1.2rem;}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:300;line-height:1.0;color:var(--charcoal);text-transform:uppercase;text-shadow:0 1px 8px rgba(245,240,232,0.8);}
 .hero-title .accent{color:var(--gold);font-style:italic;}
-.hero-sub{margin:1.2rem 0 2rem;font-size:0.78rem;line-height:1.45;color:var(--charcoal);text-shadow:0 1px 6px rgba(245,240,232,0.9);}
+.hero-sub{margin:1.2rem 0 2rem;font-size:0.78rem;line-height:1.9;color:var(--charcoal);text-shadow:0 1px 6px rgba(245,240,232,0.9);}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
 /* BUTTONS */
 .btn-dark{background:var(--charcoal);color:var(--white);padding:0.85rem 1.7rem;font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;font-family:'Josefin Sans',sans-serif;}
@@ -164,7 +164,7 @@ transition:transform .35s ease;
 /* DECANT */
 .dec-inner{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:center;}
 .dec-text .sec-title{text-align:left;}.dec-text .sec-line{margin-left:0;}
-.dec-text p{font-size:0.76rem;line-height:1.45;color:var(--warm-gray);margin-bottom:1.5rem;}
+.dec-text p{font-size:0.76rem;line-height:1.9;color:var(--warm-gray);margin-bottom:1.5rem;}
 .dec-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center;}
 .dec-step .step-icon{font-size:3rem;margin-bottom:0.8rem;opacity:0.92;line-height:1;}
 .dec-step strong{display:block;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.2rem;}
@@ -183,13 +183,13 @@ transition:transform .35s ease;
 .faq-q.open span{transform:rotate(45deg);}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
 .faq-a.open{max-height:300px;}
-.faq-a p{font-size:0.7rem;line-height:1.45;color:var(--warm-gray);padding-bottom:1rem;}
+.faq-a p{font-size:0.7rem;line-height:1.9;color:var(--warm-gray);padding-bottom:1rem;}
 /* APARTADOS */
 .apart-inner{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
 .apart-img{height:280px;background:linear-gradient(135deg,#3a3028,#5a4a38);display:flex;align-items:center;justify-content:center;}
 .apart-img span{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:rgba(184,149,106,0.22);letter-spacing:0.2em;}
 .apart-text .sec-title{text-align:left;}.apart-text .sec-line{margin-left:0;}
-.apart-text p{font-size:0.76rem;line-height:1.45;color:var(--warm-gray);margin-bottom:1.5rem;}
+.apart-text p{font-size:0.76rem;line-height:1.9;color:var(--warm-gray);margin-bottom:1.5rem;}
 .apart-steps{display:flex;gap:0.7rem;flex-wrap:wrap;align-items:center;margin-top:1.3rem;}
 .apart-step{text-align:center;}
 .apart-num{font-size:0.52rem;letter-spacing:0.1em;color:var(--gold);text-transform:uppercase;margin-bottom:0.25rem;}
@@ -197,7 +197,7 @@ transition:transform .35s ease;
 .apart-arrow{color:var(--gold);font-size:0.9rem;}
 /* CONTACT */
 .contact-inner{max-width:500px;margin:0 auto;text-align:center;}
-.contact-inner > p{font-size:0.76rem;color:var(--warm-gray);margin-bottom:1.8rem;line-height:1.45;}
+.contact-inner > p{font-size:0.76rem;color:var(--warm-gray);margin-bottom:1.8rem;line-height:1.9;}
 .cform{display:flex;flex-direction:column;gap:0.85rem;}
 .cform input,.cform textarea{padding:0.82rem 1rem;border:1px solid var(--sand);background:#fff;font-family:'Josefin Sans',sans-serif;font-size:0.7rem;outline:none;transition:border-color .3s;}
 .cform input:focus,.cform textarea:focus{border-color:var(--gold);}
@@ -1056,7 +1056,7 @@ body.cart-open{
 .prive-copy{
   margin-top:1rem;
   font-size:.78rem;
-  line-height:1.45;
+  line-height:1.9;
   color:var(--warm-gray);
   max-width:620px;
 }
@@ -1406,7 +1406,7 @@ body.cart-open{
 
 .pcard.search-hidden,
 .nov-card.search-hidden{
-  display:block !important;
+  display:none !important;
 }
 
 .redeem-ref-box{
@@ -1640,7 +1640,7 @@ body.cart-open{
 .pcard.search-hidden,
 .nov-card.search-hidden,
 .product-card.search-hidden{
-  display:block !important;
+  display:none !important;
 }
 
 
@@ -1725,7 +1725,7 @@ body.cart-open{
 .pcard.athelier-hidden,
 .nov-card.athelier-hidden,
 .product-card.athelier-hidden{
-  display:block !important;
+  display:none !important;
 }
 
 
@@ -1777,7 +1777,7 @@ body.cart-open{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:8px;
+  margin-bottom:12px;
   font-family:'Cormorant Garamond',serif;
   font-size:1.5rem;
 }
@@ -1811,7 +1811,7 @@ body.cart-open{
 .pcard.search-force-hide,
 .nov-card.search-force-hide,
 .product-card.search-force-hide{
-  display:block !important;
+  display:none !important;
 }
 
 
@@ -2437,16 +2437,27 @@ body.cart-open{
 }
 .full-perfumes-grid .psizes,
 .full-perfumes-grid .size-options{
-  display:block !important;
+  display:none !important;
 }
-.full-perfumes-grid .pcard::after{content:none!important;display:none!important;}
+.full-perfumes-grid .pcard::after{
+  content:"100ml · desde $800 MXN";
+  display:block;
+  margin:0 1.1rem 1rem;
+  padding:.7rem;
+  background:var(--cream);
+  border:1px solid rgba(184,149,106,.2);
+  color:var(--charcoal);
+  font-size:.68rem;
+  text-align:center;
+  letter-spacing:.08em;
+}
 .full-perfumes-grid .add-btn,
 .full-perfumes-grid button{
   font-size:0 !important;
 }
 .full-perfumes-grid .add-btn::before,
 .full-perfumes-grid button::before{
-  content:"";
+  content:"CONSULTAR FRASCO";
   font-size:.62rem;
 }
 
@@ -2672,880 +2683,7 @@ footer .footer-grid,
   }
 }
 
-
-/* FOOTER DISTRIBUCION EXACTA */
-footer{
-  padding:4rem 3rem 1.2rem !important;
-  background:var(--charcoal) !important;
-}
-
-.footer-main-grid{
-  display:grid !important;
-  grid-template-columns: 1.2fr 1.25fr .72fr .72fr 1.15fr !important;
-  gap:2.2rem !important;
-  align-items:start !important;
-  max-width:1400px !important;
-  margin:0 auto !important;
-}
-
-.footer-brand-col{
-  min-width:0;
-}
-
-.footer-brand-col p{
-  color:rgba(253,250,245,.55) !important;
-  font-size:.68rem !important;
-  line-height:1.7 !important;
-}
-
-.footer-contact-inline{
-  display:block !important;
-  width:100% !important;
-  max-width:360px !important;
-}
-
-.footer-contact-inline h4,
-.footer-nav-col h4,
-.footer-help-col h4,
-.footer-social-col h4{
-  color:var(--gold) !important;
-  font-size:.62rem !important;
-  letter-spacing:.24em !important;
-  text-transform:uppercase !important;
-  margin-bottom:.85rem !important;
-}
-
-.footer-contact-inline p{
-  color:rgba(253,250,245,.58) !important;
-  font-size:.62rem !important;
-  line-height:1.5 !important;
-  margin-bottom:.65rem !important;
-}
-
-.footer-contact-inline input,
-.footer-contact-inline textarea{
-  width:100% !important;
-  background:rgba(255,255,255,.03) !important;
-  border:1px solid rgba(184,149,106,.22) !important;
-  color:#fff !important;
-  padding:.55rem .65rem !important;
-  margin-bottom:.45rem !important;
-  font-size:.62rem !important;
-  font-family:'Josefin Sans',sans-serif !important;
-  outline:none !important;
-}
-
-.footer-contact-inline textarea{
-  height:54px !important;
-  resize:none !important;
-}
-
-.footer-contact-inline button{
-  width:100% !important;
-  border:none !important;
-  background:var(--gold) !important;
-  color:var(--charcoal) !important;
-  padding:.62rem !important;
-  font-size:.56rem !important;
-  letter-spacing:.18em !important;
-  text-transform:uppercase !important;
-  cursor:pointer !important;
-}
-
-.footer-nav-col,
-.footer-help-col,
-.footer-social-col{
-  min-width:0;
-}
-
-.footer-nav-col a,
-.footer-help-col a{
-  display:block !important;
-  color:rgba(253,250,245,.48) !important;
-  font-size:.68rem !important;
-  text-decoration:none !important;
-  margin-bottom:.65rem !important;
-}
-
-.footer-nav-col a:hover,
-.footer-help-col a:hover{
-  color:var(--gold) !important;
-}
-
-.footer-social-col .socials{
-  display:flex !important;
-  gap:.55rem !important;
-  margin-bottom:1.5rem !important;
-}
-
-.footer-social-col .socials a{
-  width:34px !important;
-  height:34px !important;
-  border:1px solid rgba(184,149,106,.26) !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  color:rgba(253,250,245,.55) !important;
-  text-decoration:none !important;
-  font-size:.62rem !important;
-}
-
-.footer-wa-link{
-  display:block !important;
-  color:#fff !important;
-  text-decoration:none !important;
-  font-size:.62rem !important;
-  letter-spacing:.18em !important;
-  font-weight:600 !important;
-}
-
-.footer-copy{
-  max-width:1400px !important;
-  margin:3rem auto 0 !important;
-  padding-top:1.2rem !important;
-  border-top:1px solid rgba(255,255,255,.08) !important;
-  text-align:center !important;
-  color:rgba(253,250,245,.28) !important;
-  font-size:.58rem !important;
-  letter-spacing:.12em !important;
-}
-
-@media(max-width:1100px){
-  .footer-main-grid{
-    grid-template-columns:1fr 1fr !important;
-  }
-}
-@media(max-width:700px){
-  footer{padding:3rem 1.2rem 1rem !important;}
-  .footer-main-grid{
-    grid-template-columns:1fr !important;
-  }
-}
-
-
-/* LOGO FOOTER REAL */
-.footer-logo-real{
-  display:block !important;
-  width:78px !important;
-  height:auto !important;
-  object-fit:contain !important;
-  margin-bottom:12px !important;
-  opacity:.95 !important;
-}
-
-
-/* PERFUMES COMPLETOS REAL CATALOG */
-.full-perfumes-section{
-  padding:4rem 3rem;
-  background:var(--white);
-}
-.full-perfumes-wrap{
-  max-width:1400px;
-  margin:0 auto;
-}
-.full-perfumes-head{
-  text-align:center;
-  margin-bottom:2rem;
-}
-.full-perfumes-head p{
-  color:var(--gold);
-  font-size:.58rem;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  margin-bottom:.5rem;
-}
-.full-perfumes-head h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.4rem,4vw,4rem);
-  font-weight:300;
-  text-transform:uppercase;
-  color:var(--charcoal);
-}
-.full-perfumes-head span{
-  display:block;
-  color:var(--warm-gray);
-  font-size:.72rem;
-  margin-top:.6rem;
-}
-.full-perfumes-filter{
-  margin-bottom:2rem;
-}
-.full-perfumes-grid .pcard{
-  display:flex;
-  flex-direction:column;
-}
-.full-bottle-price{
-  margin:.9rem 1.1rem .8rem;
-  padding:.78rem;
-  background:var(--cream);
-  border:1px solid rgba(184,149,106,.2);
-  color:var(--charcoal);
-  font-size:.72rem;
-  text-align:center;
-  letter-spacing:.08em;
-}
-.full-bottle-btn{
-  margin:0 1.1rem 1.1rem;
-  border:1px solid rgba(184,149,106,.35);
-  background:var(--charcoal);
-  color:#fff;
-  padding:.9rem;
-  font-family:'Josefin Sans',sans-serif;
-  font-size:.62rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  cursor:pointer;
-}
-.full-bottle-btn:hover{
-  background:var(--gold);
-  color:var(--charcoal);
-}
-@media(max-width:768px){
-  .full-perfumes-section{padding:3rem 1.2rem;}
-}
-
-
-/* LIMPIEZA PERFUMES COMPLETOS */
-.full-perfumes-grid .full-bottle-btn,
-.full-perfumes-grid .padd,
-.full-perfumes-grid .add-btn,
-.full-perfumes-grid .nov-add{
-  display:block !important;
-}
-
-/* elimina el precio duplicado generado por estilos anteriores */
-.full-perfumes-grid .pcard::after{content:none!important;display:none!important;}
-
-/* elimina cualquier texto/botón viejo encimado sobre la imagen */
-.full-perfumes-grid .pimg > button,
-.full-perfumes-grid .pimg > a,
-.full-perfumes-grid .pimg .full-bottle-btn,
-.full-perfumes-grid .pimg .padd,
-.full-perfumes-grid .pimg .add-btn{
-  display:block !important;
-}
-
-/* deja solo la tarjeta de precio buena */
-.full-perfumes-grid .full-bottle-price{
-  margin:1rem 1.1rem 1.2rem !important;
-  padding:.85rem !important;
-  background:var(--cream) !important;
-  border:1px solid rgba(184,149,106,.22) !important;
-  color:var(--charcoal) !important;
-  font-size:.78rem !important;
-  text-align:center !important;
-  letter-spacing:.08em !important;
-}
-
-/* por si algún botón viejo sigue dentro de la card */
-.full-perfumes-grid button:not(.fav-product-btn){
-  display:block !important;
-}
-
 </style>
-
-<style id="footer-horizontal-fix">
-footer{
-  background:#221b17 !important;
-  padding:55px 45px 20px !important;
-}
-
-.footer-main-grid{
-  width:100% !important;
-  max-width:1600px !important;
-  margin:0 auto !important;
-  display:flex !important;
-  flex-direction:row !important;
-  justify-content:space-between !important;
-  align-items:flex-start !important;
-  gap:55px !important;
-  flex-wrap:nowrap !important;
-}
-
-.footer-brand-col{
-  width:220px !important;
-  min-width:220px !important;
-}
-
-.footer-contact-inline{
-  width:360px !important;
-  min-width:360px !important;
-}
-
-.footer-nav-col{
-  width:170px !important;
-  min-width:170px !important;
-}
-
-.footer-help-col{
-  width:170px !important;
-  min-width:170px !important;
-}
-
-.footer-social-col{
-  width:250px !important;
-  min-width:250px !important;
-}
-
-.footer-contact-inline h4,
-.footer-nav-col h4,
-.footer-help-col h4,
-.footer-social-col h4{
-  color:#c8a06d !important;
-  font-size:12px !important;
-  letter-spacing:.25em !important;
-  text-transform:uppercase !important;
-  margin-bottom:18px !important;
-}
-
-.footer-brand-col p,
-.footer-contact-inline p{
-  color:rgba(255,255,255,.58) !important;
-  font-size:13px !important;
-  line-height:1.7 !important;
-}
-
-.footer-nav-col a,
-.footer-help-col a{
-  display:block !important;
-  color:rgba(255,255,255,.58) !important;
-  text-decoration:none !important;
-  margin-bottom:12px !important;
-  font-size:13px !important;
-}
-
-.footer-contact-inline input,
-.footer-contact-inline textarea{
-  width:100% !important;
-  background:rgba(255,255,255,.03) !important;
-  border:1px solid rgba(200,160,109,.24) !important;
-  color:white !important;
-  padding:12px !important;
-  margin-bottom:10px !important;
-  font-size:12px !important;
-}
-
-.footer-contact-inline textarea{
-  height:85px !important;
-  resize:none !important;
-}
-
-.footer-contact-inline button{
-  width:100% !important;
-  border:none !important;
-  background:#c8a06d !important;
-  color:#221b17 !important;
-  padding:13px !important;
-  font-size:11px !important;
-  letter-spacing:.2em !important;
-  text-transform:uppercase !important;
-}
-
-.footer-social-col .socials{
-  display:flex !important;
-  gap:12px !important;
-  margin-bottom:25px !important;
-}
-
-.footer-social-col .socials a{
-  width:42px !important;
-  height:42px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  border:1px solid rgba(200,160,109,.24) !important;
-  color:white !important;
-  text-decoration:none !important;
-}
-
-.footer-wa-link{
-  color:white !important;
-  text-decoration:none !important;
-  font-size:12px !important;
-  letter-spacing:.18em !important;
-}
-
-.footer-copy{
-  width:100% !important;
-  text-align:center !important;
-  margin-top:45px !important;
-  padding-top:18px !important;
-  border-top:1px solid rgba(255,255,255,.08) !important;
-  color:rgba(255,255,255,.35) !important;
-  font-size:11px !important;
-  letter-spacing:.14em !important;
-}
-
-@media(max-width:1200px){
-  .footer-main-grid{
-    flex-wrap:wrap !important;
-  }
-}
-
-@media(max-width:768px){
-  footer{
-    padding:40px 22px 20px !important;
-  }
-
-  .footer-main-grid{
-    flex-direction:column !important;
-    gap:35px !important;
-  }
-
-  .footer-brand-col,
-  .footer-contact-inline,
-  .footer-nav-col,
-  .footer-help-col,
-  .footer-social-col{
-    width:100% !important;
-    min-width:100% !important;
-  }
-}
-</style>
-
-
-<style id="footer-real-fix">
-.footer-final{
-    background:linear-gradient(90deg,#241b17 0%,#1e1713 100%);
-    padding:38px 45px 14px;
-}
-
-.footer-final-grid{
-    max-width:1650px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns: 190px 330px 150px 150px 220px;
-    gap:35px;
-    align-items:flex-start;
-}
-
-.footer-brand img{
-    width:62px;
-    margin-bottom:8px;
-    opacity:.92;
-}
-
-.footer-brand p{
-    color:rgba(255,255,255,.62);
-    font-size:12px;
-    line-height:1.45;
-    margin:0;
-}
-
-.footer-contact h4,
-.footer-nav h4,
-.footer-help h4,
-.footer-social h4{
-    color:#c8a06d;
-    font-size:13px;
-    letter-spacing:.28em;
-    margin-bottom:8px;
-    font-weight:600;
-}
-
-.footer-contact span{
-    display:block;
-    color:rgba(255,255,255,.68);
-    font-size:12px;
-    margin-bottom:10px;
-}
-
-.footer-contact input,
-.footer-contact textarea{
-    width:100%;
-    background:rgba(255,255,255,.02);
-    border:1px solid rgba(200,160,109,.26);
-    color:white;
-    padding:10px 12px;
-    margin-bottom:8px;
-    font-size:13px;
-    outline:none;
-}
-
-.footer-contact textarea{
-    height:72px;
-    resize:none;
-}
-
-.footer-contact button{
-    width:100%;
-    background:#c8a06d;
-    color:#241b17;
-    border:none;
-    padding:11px;
-    font-size:12px;
-    letter-spacing:.24em;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.footer-nav a,
-.footer-help a{
-    display:block;
-    color:rgba(255,255,255,.64);
-    text-decoration:none;
-    margin-bottom:9px;
-    font-size:12px;
-}
-
-.footer-social-icons{
-    display:flex;
-    gap:12px;
-    margin-bottom:16px;
-}
-
-.footer-social-icons a{
-    width:38px;
-    height:38px;
-    border:1px solid rgba(200,160,109,.28);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    text-decoration:none;
-    font-size:13px;
-}
-
-.footer-wa{
-    color:white;
-    text-decoration:none;
-    font-size:13px;
-    letter-spacing:.18em;
-    font-weight:600;
-}
-
-.footer-copy{
-    max-width:1650px;
-    margin:26px auto 0;
-    padding-top:12px;
-    border-top:1px solid rgba(255,255,255,.08);
-    text-align:center;
-    color:rgba(255,255,255,.34);
-    font-size:11px;
-    letter-spacing:.16em;
-}
-
-@media(max-width:1400px){
-    .footer-final-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:768px){
-    .footer-final{
-        padding:30px 18px 12px;
-    }
-
-    .footer-final-grid{
-        grid-template-columns:1fr;
-        gap:38px;
-    }
-
-    .footer-contact,
-    .footer-social{
-        max-width:100%;
-    }
-}
-</style>
-
-
-<style id="athelier-final-fix-css">
-.pcard .pimg,.full-pcard .pimg{position:relative!important;}
-
-.fav-final{
-  position:absolute!important;
-  top:12px!important;
-  left:12px!important;
-  width:42px!important;
-  height:42px!important;
-  border-radius:50%!important;
-  border:1.5px solid #d8c2a1!important;
-  background:#fff!important;
-  color:#c39a63!important;
-  z-index:999999!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  padding:0!important;
-  margin:0!important;
-  font-size:22px!important;
-  font-weight:700!important;
-  line-height:1!important;
-  cursor:pointer!important;
-  box-shadow:none!important;
-  appearance:none!important;
-  -webkit-appearance:none!important;
-  overflow:hidden!important;
-  text-indent:0!important;
-  letter-spacing:0!important;
-}
-
-.fav-final::before,.fav-final::after{content:none!important;display:none!important;}
-
-.fav-final.active{
-  background:#c39a63!important;
-  border-color:#c39a63!important;
-  color:#fff!important;
-}
-
-
-
-.header-fav-final{
-  position:relative!important;
-  width:40px!important;
-  height:40px!important;
-  border-radius:50%!important;
-  border:1.5px solid #d8c2a1!important;
-  background:#fff!important;
-  color:#c39a63!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  margin-left:.5rem!important;
-  font-size:20px!important;
-  cursor:pointer!important;
-}
-
-.header-fav-final.active{
-  background:#c39a63!important;
-  border-color:#c39a63!important;
-  color:#fff!important;
-}
-
-.header-fav-final span{
-  position:absolute!important;
-  top:-7px!important;
-  right:-7px!important;
-  min-width:18px!important;
-  height:18px!important;
-  border-radius:50%!important;
-  background:#2a2520!important;
-  color:#fff!important;
-  font-size:10px!important;
-  align-items:center!important;
-  justify-content:center!important;
-}
-
-.fav-panel-final{
-  position:fixed!important;
-  top:0!important;
-  right:-420px!important;
-  width:390px!important;
-  max-width:92vw!important;
-  height:100vh!important;
-  background:#fff!important;
-  z-index:9999999!important;
-  box-shadow:-8px 0 30px rgba(0,0,0,.18)!important;
-  transition:.35s ease!important;
-  overflow-y:auto!important;
-}
-
-.fav-panel-final.open{right:0!important;}
-
-.fav-panel-head-final{
-  display:flex!important;
-  justify-content:space-between!important;
-  align-items:center!important;
-  padding:1.2rem!important;
-  border-bottom:1px solid rgba(0,0,0,.08)!important;
-}
-
-.fav-panel-head-final h3{
-  margin:0!important;
-  font-family:'Cormorant Garamond',serif!important;
-  font-size:1.8rem!important;
-}
-
-.fav-panel-head-final button{
-  border:none!important;
-  background:none!important;
-  font-size:28px!important;
-  cursor:pointer!important;
-}
-
-.fav-items-final{padding:1rem!important;}
-
-.fav-item-final{
-  display:flex!important;
-  gap:14px!important;
-  align-items:center!important;
-  padding:12px 0!important;
-  border-bottom:1px solid rgba(0,0,0,.06)!important;
-}
-
-.fav-item-final img{
-  width:58px!important;
-  height:58px!important;
-  object-fit:contain!important;
-  background:#fafafa!important;
-}
-
-.fav-item-final h4{margin:0!important;font-size:.95rem!important;}
-.fav-item-final p{margin:.25rem 0 0!important;color:#777!important;font-size:.72rem!important;line-height:1.4!important;}
-
-.fav-item-final button{
-  margin-left:auto!important;
-  border:none!important;
-  background:#2d2622!important;
-  color:#fff!important;
-  padding:.55rem .75rem!important;
-  font-size:.65rem!important;
-  letter-spacing:.08em!important;
-  text-transform:uppercase!important;
-  cursor:pointer!important;
-}
-
-.full-price-cart-final{
-  display:block!important;
-  width:calc(100% - 2.2rem)!important;
-  margin:1rem auto 1.2rem!important;
-  border:1px solid rgba(184,149,106,.22)!important;
-  background:#f6f0e8!important;
-  color:#2d2622!important;
-  padding:1rem .7rem!important;
-  font-size:.82rem!important;
-  letter-spacing:.08em!important;
-  cursor:pointer!important;
-}
-.full-price-cart-final:hover{background:#b8956a!important;color:#fff!important;}
-.full-perfumes-grid .pcard::after{content:none!important;display:none!important;}
-</style>
-
-
-<style id="remove-all-hearts-clean">
-/* REMOVE ALL HEARTS / FAVORITES ONLY */
-.fav-final,
-.at-fav,
-.ath-fav-heart,
-.decant-heart-btn,
-.full-heart-btn,
-.fav-heart-btn,
-#headerFavBtnFinal,
-#favoritesPanel,
-#favPanelFinal,
-.favorites-panel,
-.favorites-panel-clean{
-  display:block !important;
-}
-</style>
-
-
-<style id="full-perfumes-final-css">
-.full-perfumes-section{
-  padding:4rem 3rem;
-  background:var(--white);
-}
-.full-perfumes-wrap{
-  max-width:1400px;
-  margin:0 auto;
-}
-.full-perfumes-head{
-  text-align:center;
-  margin-bottom:2rem;
-}
-.full-perfumes-head p{
-  color:var(--gold);
-  font-size:.58rem;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  margin-bottom:.5rem;
-}
-.full-perfumes-head h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.4rem,4vw,4rem);
-  font-weight:300;
-  text-transform:uppercase;
-  color:var(--charcoal);
-}
-.full-perfumes-head span{
-  display:block;
-  color:var(--warm-gray);
-  font-size:.72rem;
-  margin-top:.6rem;
-}
-.full-perfumes-filter{
-  margin-bottom:2rem;
-}
-.full-perfumes-grid .pcard::after{
-  content:none !important;
-  display:block !important;
-}
-.full-perfumes-grid .popts,
-.full-perfumes-grid .padd,
-.full-perfumes-grid .ptag,
-.full-perfumes-grid .full-actions,
-.full-perfumes-grid .full-cart-btn,
-.full-perfumes-grid .full-fav-btn,
-.full-perfumes-grid .full-bottle-btn{
-  display:block !important;
-}
-.full-price-cart-final{
-  display:block !important;
-  width:calc(100% - 2.2rem) !important;
-  margin:1rem auto 1.2rem !important;
-  border:1px solid rgba(184,149,106,.22) !important;
-  background:#f6f0e8 !important;
-  color:#2d2622 !important;
-  padding:1rem .7rem !important;
-  font-family:'Josefin Sans',sans-serif !important;
-  font-size:.82rem !important;
-  letter-spacing:.08em !important;
-  cursor:pointer !important;
-  text-align:center !important;
-}
-.full-price-cart-final:hover{
-  background:#b8956a !important;
-  color:#fff !important;
-}
-@media(max-width:768px){
-  .full-perfumes-section{padding:3rem 1.2rem;}
-}
-</style>
-
-
-<style id="force-full-price-button-visible">
-/* BOTÓN PRECIO / CARRITO EN PERFUMES COMPLETOS */
-.full-perfumes-grid .full-price-cart-final{
-  display:block !important;
-  visibility:visible !important;
-  opacity:1 !important;
-  width:calc(100% - 2.2rem) !important;
-  margin:1rem auto 1.2rem !important;
-  border:1px solid rgba(184,149,106,.28) !important;
-  background:#f6f0e8 !important;
-  color:#2d2622 !important;
-  padding:1rem .7rem !important;
-  font-family:'Josefin Sans',sans-serif !important;
-  font-size:.82rem !important;
-  letter-spacing:.08em !important;
-  cursor:pointer !important;
-  text-align:center !important;
-  line-height:1.25 !important;
-  text-transform:none !important;
-}
-
-.full-perfumes-grid .full-price-cart-final:hover{
-  background:#b8956a !important;
-  color:#fff !important;
-}
-
-/* Ocultar botones viejos, pero NO el botón del precio */
-.full-perfumes-grid .popts,
-.full-perfumes-grid .padd,
-.full-perfumes-grid .ptag,
-.full-perfumes-grid .full-actions,
-.full-perfumes-grid .full-cart-btn,
-.full-perfumes-grid .full-fav-btn,
-.full-perfumes-grid .full-bottle-btn{
-  display:block !important;
-}
-
-.full-perfumes-grid .pcard::after{
-  content:none !important;
-  display:block !important;
-}
-</style>
-
 </head>
 <body>
 
@@ -3585,10 +2723,6 @@ footer{
 <circle cx="11" cy="11" r="7" stroke-width="1.8"></circle>
 <path d="M20 20l-3.5-3.5" stroke-width="1.8" stroke-linecap="round"></path>
 </svg>
-</button>
-<button id="headerFavBtnFinal" class="header-fav-btn-final" onclick="openFavPanelFinal()" aria-label="Ver favoritos" type="button">
-  <span class="header-fav-heart-final">♡</span>
-  <span id="headerFavCountFinal" class="header-fav-count-final" style="display:none;">0</span>
 </button>
 <button class="account-btn" onclick="openAccountModal()">Mi cuenta</button>
 
@@ -3674,7 +2808,7 @@ footer{
 
 
 <div class="sw" style="background:var(--cream);" id="perfumes">
-  <h2 class="sec-title">DECANTS</h2>
+  <h2 class="sec-title">CATÁLOGO COMPLETO</h2>
   <div class="sec-line"></div>
   <div class="cat-filters">
     <button class="cfbtn on" onclick="filterCat('Todos',this)">Todos</button>
@@ -3685,26 +2819,6 @@ footer{
   <div class="pgrid" id="grid"></div>
 </div>
 
-
-
-<section class="full-perfumes-section" id="perfumes-completos">
-  <div class="full-perfumes-wrap">
-    <div class="full-perfumes-head">
-      <p>FRASCOS COMPLETOS</p>
-      <h2>PERFUMES COMPLETOS</h2>
-      <span>Consulta disponibilidad y precio final. Referencia: 100ml desde $800 MXN.</span>
-    </div>
-
-    <div class="cat-filter full-perfumes-filter">
-      <button class="cat-btn active" onclick="setFullCat('Todos', this)">Todos</button>
-      <button class="cat-btn" onclick="setFullCat('Masculino', this)">Masculinos</button>
-      <button class="cat-btn" onclick="setFullCat('Femenino', this)">Femeninos</button>
-      <button class="cat-btn" onclick="setFullCat('Unisex', this)">Unisex</button>
-    </div>
-
-    <div class="pgrid full-perfumes-grid" id="fullGrid"></div>
-  </div>
-</section>
 
 <section class="about-compact-section" id="nosotros">
   <div class="about-compact-wrap">
@@ -3729,7 +2843,20 @@ footer{
 </section>
 
 
-
+<section class="full-perfumes-section" id="perfumes-completos">
+  <div class="full-perfumes-wrap">
+    <div class="full-perfumes-head">
+      <p>Frascos completos</p>
+      <h2>Perfumes completos</h2>
+      <span>Consulta disponibilidad y precio final. Referencia: 100ml desde $800 MXN.</span>
+    </div>
+    <div class="pgrid full-perfumes-grid">
+      
+      <div class="full-perfume-card"><div class="full-perfume-img"></div><h3>Perfume completo</h3><p>100ml · $800 MXN</p><button>Consultar</button></div>
+    
+    </div>
+  </div>
+</section>
 
 <section class="rewards-compact-section" id="recompensas">
   <div class="rewards-compact-wrap">
@@ -3896,69 +3023,39 @@ footer{
   </div>
 </section>
 
-
-
-<footer class="footer-final">
-  <div class="footer-final-grid">
-
-    <div class="footer-brand">
-      <img src="https://i.postimg.cc/cgGQNry5/Diseno-sin-titulo-removebg-preview-(1).png" alt="ATHELIER Logo" class="footer-logo-real">
-      <p>Decants y perfumes originales.</p>
-      <p>Hecho con pasión.</p>
-      <p>Inspirado en la esencia.</p>
+<footer>
+  <div class="fgrid">
+    <div class="fbrand">
+      <div class="flogo"><img src="https://i.postimg.cc/cgGQNry5/Diseno-sin-titulo-removebg-preview-(1).png" alt="ATHELIER"></div>
+      <p>Decants y perfumes originales.<br>Hecho con pasión. Inspirado en la esencia.</p>
     </div>
+    
+<div class="footer-contact-inline" id="contacto">
+  <h4>CONTÁCTANOS</h4>
+  <p>¿Dudas o pedidos especiales? Escríbenos.</p>
+  <form onsubmit="sendFooterContact(event)">
+    <input id="footerContactName" type="text" placeholder="Tu nombre" required>
+    <input id="footerContactEmail" type="email" placeholder="Tu correo">
+    <textarea id="footerContactMsg" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">ENVIAR</button>
+  </form>
+</div>
 
-    <div class="footer-contact" id="contacto">
-      <h4>CONTÁCTANOS</h4>
-      <span>¿Dudas o pedidos especiales? Escríbenos.</span>
-
-      <form onsubmit="sendFooterContact(event)">
-        <input id="footerContactName" type="text" placeholder="Tu nombre" required>
-        <input id="footerContactEmail" type="email" placeholder="Tu correo">
-        <textarea id="footerContactMsg" placeholder="Tu mensaje" required></textarea>
-        <button type="submit">ENVIAR</button>
-      </form>
-    </div>
-
-    <div class="footer-nav">
-      <h4>NAVEGACIÓN</h4>
-      <a href="#inicio">Inicio</a>
-      <a href="#novedades">Novedades</a>
-      <a href="#perfumes">Catálogo</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-
-    <div class="footer-help">
-      <h4>AYUDA</h4>
-      <a href="#faq">Preguntas Frecuentes</a>
-      <a href="#envios">Envíos</a>
-      <a href="#politicas">Políticas</a>
-      <a href="#terminos">Términos</a>
-    </div>
-
-    <div class="footer-social">
-      <h4>SÍGUENOS</h4>
-
-      <div class="footer-social-icons">
-        <a href="#">IG</a>
-        <a href="#">TK</a>
-        <a href="#">WA</a>
+<div class="fcol"><h4>Navegación</h4><ul><li><a href="#inicio">Inicio</a></li><li><a href="#novedades">Novedades</a></li><li><a href="#perfumes">Catálogo</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+    <div class="fcol"><h4>Ayuda</h4><ul><li><a href="#faq">Preguntas Frecuentes</a></li><li><a href="#contacto">Envíos</a></li><li><a href="#contacto">Políticas</a></li><li><a href="#contacto">Términos</a></li></ul></div>
+    <div class="fcol">
+      <h4>Síguenos</h4>
+      <div class="slinks">
+        <a href="https://www.instagram.com/athelier_decants/">IG</a>
+        <a href="https://www.tiktok.com/@athelier_decants">TK</a>
+        <a href="#contacto">WA</a>
       </div>
-
-      <a class="footer-wa" href="https://wa.me/523326095950">
-        📱 ESCRÍBENOS POR WHATSAPP
-      </a>
+      <a href="https://wa.me/523326095950?text=Hola! Me interesan sus fragancias." class="btn-dark" style="font-size:0.58rem;padding:0.55rem 0.9rem;margin-top:0.5rem;">📱 Escríbenos por WhatsApp</a>
     </div>
-
   </div>
+  <div class="fbottom"><p>© 2024 ATHELIER — DECANTS Y PERFUMES ORIGINALES. TODOS LOS DERECHOS RESERVADOS.</p></div>
 
-  <div class="footer-copy">
-    © 2024 ATHELIER — DECANTS Y PERFUMES ORIGINALES. TODOS LOS DERECHOS RESERVADOS.
-  </div>
 </footer>
-
-
 
 <a class="wa-float" href="https://wa.me/523326095950?text=Hola! Me interesan sus fragancias.">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.828L0 24l6.341-1.501A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.6a9.59 9.59 0 01-4.896-1.343l-.351-.208-3.642.862.924-3.542-.228-.364A9.555 9.555 0 012.4 12C2.4 6.7 6.7 2.4 12 2.4S21.6 6.7 21.6 12 17.3 21.6 12 21.6z"/></svg>
@@ -4163,54 +3260,54 @@ footer{
 <script>
 var WA = "523326095950";
 var PRODUCTS = [
-  {id:1,name:"Afnan 9PM",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.65414.jpg",full:700},
-  {id:2,name:"9 AM Dive",brand:"AFNAN",type:"Masculino · Acuático",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.78611.jpg",full:700},
-  {id:3,name:"9PM Rebel",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.99238.jpg",full:900},
-  {id:4,name:"9PM Night Out",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:60,ml5:80,ml10:160,img:"https://fimgs.net/mdimg/perfume/375x500.123313.jpg",full:1100},
-  {id:5,name:"Halloween Hero",brand:"HALLOWEEN",type:"Masculino · Fresco",cat:"Masculino",ml3:60,ml5:80,ml10:160,img:"https://fimgs.net/mdimg/perfume/375x500.66200.jpg",full:800},
-  {id:6,name:"Mandarin Sky",brand:"ARMAF",type:"Masculino · Cítrico",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.83132.jpg",full:700},
-  {id:7,name:"Odyssey Mega",brand:"ARMAF",type:"Masculino · Amaderado",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.83133.jpg",full:700},
-  {id:8,name:"Odyssey Artisto",brand:"ARMAF",type:"Masculino · Intenso",cat:"Masculino",ml3:45,ml5:70,ml10:130,img:"https://fimgs.net/mdimg/perfume/375x500.106710.jpg",full:700},
-  {id:9,name:"Odyssey Homme Black",brand:"ARMAF",type:"Masculino · Intenso",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.64464.jpg",full:600},
-  {id:10,name:"Halloween Man X",brand:"HALLOWEEN",type:"Masculino · Fresco",cat:"Masculino",ml3:60,ml5:80,ml10:160,img:"https://fimgs.net/mdimg/perfume/375x500.53215.jpg",full:800},
-  {id:11,name:"Hawas Tropical",brand:"RASASI",type:"Masculino · Acuático",cat:"Masculino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.108054.jpg",full:1100},
-  {id:12,name:"Hawas Fire",brand:"RASASI",type:"Masculino · Oriental",cat:"Masculino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.101665.jpg",full:1100},
-  {id:13,name:"Hawas Ice",brand:"RASASI",type:"Masculino · Acuático",cat:"Masculino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.89050.jpg",full:1100},
-  {id:14,name:"CDN Sillage",brand:"ARMAF",type:"Masculino · Amaderado",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.64105.jpg",full:700},
-  {id:15,name:"CDN Intense Man",brand:"ARMAF",type:"Masculino · Intenso",cat:"Masculino",ml3:50,ml5:80,ml10:140,img:"https://fimgs.net/mdimg/perfume/375x500.34696.jpg",full:750},
-  {id:16,name:"Nautica Voyage",brand:"NAUTICA",type:"Masculino · Acuático",cat:"Masculino",ml3:30,ml5:50,ml10:70,img:"https://fimgs.net/mdimg/perfume/375x500.913.jpg",full:390},
-  {id:17,name:"Explorer",brand:"MONT BLANC",type:"Masculino · Amaderado",cat:"Masculino",ml3:60,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.52002.jpg",full:1100},
-  {id:18,name:"Versace Eros EDT",brand:"VERSACE",type:"Masculino · Fresco",cat:"Masculino",ml3:65,ml5:110,ml10:200,img:"https://fimgs.net/mdimg/perfume/375x500.16657.jpg",full:1100},
-  {id:19,name:"Le Male Le Parfum",brand:"JPG",type:"Masculino · Oriental",cat:"Masculino",ml3:90,ml5:150,ml10:290,img:"https://fimgs.net/mdimg/perfume/375x500.61856.jpg",full:2700},
-  {id:20,name:"Sauvage EDP",brand:"DIOR",type:"Masculino · Fresco",cat:"Masculino",ml3:149,ml5:210,ml10:380,img:"https://fimgs.net/mdimg/perfume/375x500.31861.jpg",full:2700},
-  {id:21,name:"Sceptre Malachite",brand:"MAISON ALHAMBRA",type:"Masculino · Amaderado",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.94163.jpg",full:700},
-  {id:22,name:"His Confession",brand:"LATTAFA",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.96866.jpg",full:900},
-  {id:23,name:"Asad Bourbon",brand:"LATTAFA",type:"Masculino · Amaderado",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.101124.jpg",full:800},
-  {id:24,name:"Turathi Blue",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.70839.jpg",full:750},
-  {id:25,name:"Zara London Maifayr",brand:"ZARA",type:"Masculino · Fresco",cat:"Masculino",ml3:30,ml5:50,ml10:70,img:"https://fimgs.net/mdimg/perfume/375x500.65892.jpg",full:500},
-  {id:26,name:"Rave White",brand:"RAVE",type:"Masculino · Amaderado",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.85089.jpg",full:650},
-  {id:27,name:"Nitro Red",brand:"DUMONT",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.73023.jpg",full:700},
-  {id:28,name:"Salvo EDP",brand:"MAISON ALHAMBRA",type:"Masculino · Fresco",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.93538.jpg",full:650},
-  {id:29,name:"Fakhar Black",brand:"LATTAFA",type:"Masculino · Oriental",cat:"Masculino",ml3:40,ml5:60,ml10:100,img:"https://fimgs.net/mdimg/perfume/375x500.70465.jpg",full:650},
-  {id:30,name:"Yara Rosa",brand:"LATTAFA",type:"Femenino · Floral",cat:"Femenino",ml3:50,ml5:70,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.95752.jpg",full:700},
-  {id:31,name:"Yara",brand:"LATTAFA",type:"Femenino · Floral",cat:"Femenino",ml3:50,ml5:70,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.76880.jpg",full:750},
-  {id:32,name:"Rave Now Pink",brand:"RAVE",type:"Femenino · Dulce",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.85088.jpg",full:700},
-  {id:33,name:"Sweet Like Candy",brand:"ARIANA GRANDE",type:"Femenino · Dulce",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.39970.jpg",full:850},
-  {id:34,name:"Tommy Girl Forever",brand:"TOMMY",type:"Femenino · Floral",cat:"Femenino",ml3:60,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.96153.jpg",full:800},
-  {id:35,name:"Montblanc Signature",brand:"MONT BLANC",type:"Femenino · Floral",cat:"Femenino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.60962.jpg",full:800},
-  {id:36,name:"La Rosa",brand:"ARMAF",type:"Femenino · Floral",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.50326.jpg",full:700},
-  {id:37,name:"Purr",brand:"KATY PERRY",type:"Femenino · Dulce",cat:"Femenino",ml3:30,ml5:50,ml10:80,img:"https://fimgs.net/mdimg/perfume/375x500.10543.jpg",full:600},
-  {id:38,name:"Eclaire",brand:"LATTAFA",type:"Femenino · Oriental",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.93628.jpg",full:800},
-  {id:39,name:"Stallion 53",brand:"EMPER",type:"Unisex · Amaderado",cat:"Unisex",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.106193.jpg",full:600},
-  {id:40,name:"Barakkat Rouge",brand:"FRAGRANCE WORLD",type:"Unisex · Oriental",cat:"Unisex",ml3:40,ml5:60,ml10:100,img:"https://fimgs.net/mdimg/perfume/375x500.107710.jpg",full:650},
-  {id:41,name:"Khamrah",brand:"LATTAFA",type:"Unisex · Oriental",cat:"Unisex",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.75805.jpg",full:700},
-  {id:42,name:"Light Blue",brand:"D&G",type:"Unisex · Acuático",cat:"Unisex",ml3:70,ml5:110,ml10:210,img:"https://fimgs.net/mdimg/perfume/375x500.485.jpg",full:1300},
-  {id:43,name:"Eilish No.2",brand:"BILLIE EILISH",type:"Unisex · Amaderado",cat:"Unisex",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.76532.jpg",full:950}
+  {id:1,name:"Afnan 9PM",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.65414.jpg"},
+  {id:2,name:"9 AM Dive",brand:"AFNAN",type:"Masculino · Acuático",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.78611.jpg"},
+  {id:3,name:"9PM Rebel",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.99238.jpg"},
+  {id:4,name:"9PM Night Out",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:60,ml5:80,ml10:160,img:"https://fimgs.net/mdimg/perfume/375x500.123313.jpg"},
+  {id:5,name:"Halloween Hero",brand:"HALLOWEEN",type:"Masculino · Fresco",cat:"Masculino",ml3:60,ml5:80,ml10:160,img:"https://fimgs.net/mdimg/perfume/375x500.66200.jpg"},
+  {id:6,name:"Mandarin Sky",brand:"ARMAF",type:"Masculino · Cítrico",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.83132.jpg"},
+  {id:7,name:"Odyssey Mega",brand:"ARMAF",type:"Masculino · Amaderado",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.83133.jpg"},
+  {id:8,name:"Odyssey Artisto",brand:"ARMAF",type:"Masculino · Intenso",cat:"Masculino",ml3:45,ml5:70,ml10:130,img:"https://fimgs.net/mdimg/perfume/375x500.106710.jpg"},
+  {id:9,name:"Odyssey Homme Black",brand:"ARMAF",type:"Masculino · Intenso",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.64464.jpg"},
+  {id:10,name:"Halloween Man X",brand:"HALLOWEEN",type:"Masculino · Fresco",cat:"Masculino",ml3:60,ml5:80,ml10:160,img:"https://fimgs.net/mdimg/perfume/375x500.53215.jpg"},
+  {id:11,name:"Hawas Tropical",brand:"RASASI",type:"Masculino · Acuático",cat:"Masculino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.108054.jpg"},
+  {id:12,name:"Hawas Fire",brand:"RASASI",type:"Masculino · Oriental",cat:"Masculino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.101665.jpg"},
+  {id:13,name:"Hawas Ice",brand:"RASASI",type:"Masculino · Acuático",cat:"Masculino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.89050.jpg"},
+  {id:14,name:"CDN Sillage",brand:"ARMAF",type:"Masculino · Amaderado",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.64105.jpg"},
+  {id:15,name:"CDN Intense Man",brand:"ARMAF",type:"Masculino · Intenso",cat:"Masculino",ml3:50,ml5:80,ml10:140,img:"https://fimgs.net/mdimg/perfume/375x500.34696.jpg"},
+  {id:16,name:"Nautica Voyage",brand:"NAUTICA",type:"Masculino · Acuático",cat:"Masculino",ml3:30,ml5:50,ml10:70,img:"https://fimgs.net/mdimg/perfume/375x500.913.jpg"},
+  {id:17,name:"Explorer",brand:"MONT BLANC",type:"Masculino · Amaderado",cat:"Masculino",ml3:60,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.52002.jpg"},
+  {id:18,name:"Versace Eros EDT",brand:"VERSACE",type:"Masculino · Fresco",cat:"Masculino",ml3:65,ml5:110,ml10:200,img:"https://fimgs.net/mdimg/perfume/375x500.16657.jpg"},
+  {id:19,name:"Le Male Le Parfum",brand:"JPG",type:"Masculino · Oriental",cat:"Masculino",ml3:90,ml5:150,ml10:290,img:"https://fimgs.net/mdimg/perfume/375x500.61856.jpg"},
+  {id:20,name:"Sauvage EDP",brand:"DIOR",type:"Masculino · Fresco",cat:"Masculino",ml3:149,ml5:210,ml10:380,img:"https://fimgs.net/mdimg/perfume/375x500.31861.jpg"},
+  {id:21,name:"Sceptre Malachite",brand:"MAISON ALHAMBRA",type:"Masculino · Amaderado",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.94163.jpg"},
+  {id:22,name:"His Confession",brand:"LATTAFA",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.96866.jpg"},
+  {id:23,name:"Asad Bourbon",brand:"LATTAFA",type:"Masculino · Amaderado",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.101124.jpg"},
+  {id:24,name:"Turathi Blue",brand:"AFNAN",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.70839.jpg"},
+  {id:25,name:"Zara London Maifayr",brand:"ZARA",type:"Masculino · Fresco",cat:"Masculino",ml3:30,ml5:50,ml10:70,img:"https://fimgs.net/mdimg/perfume/375x500.65892.jpg"},
+  {id:26,name:"Rave White",brand:"RAVE",type:"Masculino · Amaderado",cat:"Masculino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.85089.jpg"},
+  {id:27,name:"Nitro Red",brand:"DUMONT",type:"Masculino · Oriental",cat:"Masculino",ml3:50,ml5:80,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.73023.jpg"},
+  {id:28,name:"Salvo EDP",brand:"MAISON ALHAMBRA",type:"Masculino · Fresco",cat:"Masculino",ml3:45,ml5:70,ml10:120,img:"https://fimgs.net/mdimg/perfume/375x500.93538.jpg"},
+  {id:29,name:"Fakhar Black",brand:"LATTAFA",type:"Masculino · Oriental",cat:"Masculino",ml3:40,ml5:60,ml10:100,img:"https://fimgs.net/mdimg/perfume/375x500.70465.jpg"},
+  {id:30,name:"Yara Rosa",brand:"LATTAFA",type:"Femenino · Floral",cat:"Femenino",ml3:50,ml5:70,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.95752.jpg"},
+  {id:31,name:"Yara",brand:"LATTAFA",type:"Femenino · Floral",cat:"Femenino",ml3:50,ml5:70,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.76880.jpg"},
+  {id:32,name:"Rave Now Pink",brand:"RAVE",type:"Femenino · Dulce",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.85088.jpg"},
+  {id:33,name:"Sweet Like Candy",brand:"ARIANA GRANDE",type:"Femenino · Dulce",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.39970.jpg"},
+  {id:34,name:"Tommy Girl Forever",brand:"TOMMY",type:"Femenino · Floral",cat:"Femenino",ml3:60,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.96153.jpg"},
+  {id:35,name:"Montblanc Signature",brand:"MONT BLANC",type:"Femenino · Floral",cat:"Femenino",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.60962.jpg"},
+  {id:36,name:"La Rosa",brand:"ARMAF",type:"Femenino · Floral",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.50326.jpg"},
+  {id:37,name:"Purr",brand:"KATY PERRY",type:"Femenino · Dulce",cat:"Femenino",ml3:30,ml5:50,ml10:80,img:"https://fimgs.net/mdimg/perfume/375x500.10543.jpg"},
+  {id:38,name:"Eclaire",brand:"LATTAFA",type:"Femenino · Oriental",cat:"Femenino",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.93628.jpg"},
+  {id:39,name:"Stallion 53",brand:"EMPER",type:"Unisex · Amaderado",cat:"Unisex",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.106193.jpg"},
+  {id:40,name:"Barakkat Rouge",brand:"FRAGRANCE WORLD",type:"Unisex · Oriental",cat:"Unisex",ml3:40,ml5:60,ml10:100,img:"https://fimgs.net/mdimg/perfume/375x500.107710.jpg"},
+  {id:41,name:"Khamrah",brand:"LATTAFA",type:"Unisex · Oriental",cat:"Unisex",ml3:50,ml5:80,ml10:150,img:"https://fimgs.net/mdimg/perfume/375x500.75805.jpg"},
+  {id:42,name:"Light Blue",brand:"D&G",type:"Unisex · Acuático",cat:"Unisex",ml3:70,ml5:110,ml10:210,img:"https://fimgs.net/mdimg/perfume/375x500.485.jpg"},
+  {id:43,name:"Eilish No.2",brand:"BILLIE EILISH",type:"Unisex · Amaderado",cat:"Unisex",ml3:60,ml5:90,ml10:170,img:"https://fimgs.net/mdimg/perfume/375x500.76532.jpg"}
 ];
 
 var selMl = {};
 var cart = [];
-var curCat="Todos";
+var curCat = "Todos";
 var editingId = null;
 var CFG = {};
 
@@ -4232,20 +3329,13 @@ function filterCat(cat,btn){
 
 function renderProducts(){
   var grid=document.getElementById("grid");
-  if(!grid || typeof PRODUCTS==="undefined") return;
-
-  var list=(!curCat || curCat==="Todos") ? PRODUCTS : PRODUCTS.filter(function(p){return p.cat===curCat;});
-  var favs=getFavsFinal();
+  var list=curCat==="Todos"?PRODUCTS:PRODUCTS.filter(function(p){return p.cat===curCat;});
   var h="";
-
   for(var i=0;i<list.length;i++){
     var p=list[i];
     selMl[p.id]={price:p.ml3,ml:"3ml"};
-
     h+='<div class="pcard">';
-    h+='<div class="pimg">';
-    h+='<button class="fav-final '+(favs.includes(p.id) ? 'active' : '')+'" data-id="'+p.id+'" onclick="toggleFavFinal('+p.id+', this)" type="button">'+(favs.includes(p.id) ? '♥' : '♡')+'</button>';
-    h+='<img src="'+p.img+'" alt="'+p.name+'" onerror="this.style.opacity=0"><span class="pbadge">'+p.cat+'</span></div>';
+    h+='<div class="pimg"><img src="'+p.img+'" alt="'+p.name+'" onerror="this.style.opacity=0"><span class="pbadge">'+p.cat+'</span></div>';
     h+='<div class="pinfo"><div class="pname">'+p.name+'</div><div class="ptype">'+p.type+'</div>';
     h+='<div class="popts">';
     h+='<button class="ptag sel" onclick="sMl(this,'+p.id+','+p.ml3+',\'3ml\')">3ml $'+p.ml3+'</button>';
@@ -4255,9 +3345,7 @@ function renderProducts(){
     h+='<button class="padd" onclick="addToCart('+p.id+')">+ Agregar</button>';
     h+='</div></div>';
   }
-
   grid.innerHTML=h||'<p style="font-size:.75rem;color:var(--warm-gray);grid-column:1/-1;text-align:center;padding:2rem;">No hay productos en esta categoría.</p>';
-  refreshFavButtonsFinal();
 }
 
 function renderNov(){
@@ -6044,828 +5132,6 @@ function sendFooterContact(e){
   window.location.href = 'https://wa.me/523326095950?text=' + text;
 }
 </script>
-
-
-<script>
-var fullCat = "Todos";
-
-function setFullCat(cat, btn){
-  fullCat = cat;
-  document.querySelectorAll(".full-perfumes-filter .cat-btn").forEach(function(b){b.classList.remove("active");});
-  if(btn) btn.classList.add("active");
-  renderFullPerfumes();
-}
-
-function renderFullPerfumes(){
-  var grid = document.getElementById("fullGrid");
-  if(!grid || typeof PRODUCTS === "undefined") return;
-
-  var list = (!fullCat || fullCat === "Todos")
-    ? PRODUCTS
-    : PRODUCTS.filter(function(p){ return p.cat === fullCat; });
-
-  var h = "";
-
-  for(var i=0; i<list.length; i++){
-    var p = list[i];
-    var price = Number(p.full || p.fullPrice || 800);
-
-    h += '<div class="pcard full-pcard">';
-    h += '<div class="pimg">';
-    h += '<img src="'+p.img+'" alt="'+p.name+'" onerror="this.style.opacity=0">';
-    h += '<span class="pbadge">'+p.cat+'</span>';
-    h += '</div>';
-
-    h += '<div class="pinfo">';
-    h += '<div class="pname">'+p.name+'</div>';
-    h += '<div class="ptype">'+p.type+'</div>';
-    h += '</div>';
-
-    h += '<button class="full-price-cart-final" onclick="addFullBottleToCartFinal('+p.id+')" type="button">';
-    h += '100ml · $'+price.toLocaleString("es-MX")+' MXN';
-    h += '</button>';
-
-    h += '</div>';
-  }
-
-  grid.innerHTML = h || '<p style="grid-column:1/-1;text-align:center;color:var(--warm-gray);font-size:.75rem;">No hay perfumes completos en esta categoría.</p>';
-}
-
-function consultFullBottle(id){
-  var p = PRODUCTS.find(function(x){ return x.id === id; });
-  if(!p) return;
-  var text = encodeURIComponent("Hola, quiero consultar el frasco completo de " + p.name + " de 100ml.");
-  window.location.href = "https://wa.me/523326095950?text=" + text;
-}
-
-window.addEventListener("load", function(){
-  setTimeout(renderFullPerfumes, 300);
-});
-</script>
-
-
-
-
-
-<script>
-function getFavsFinal(){
-  return JSON.parse(localStorage.getItem("athelier_favs_final") || "[]").map(Number);
-}
-
-function saveFavsFinal(favs){
-  localStorage.setItem("athelier_favs_final", JSON.stringify([...new Set(favs.map(Number))]));
-}
-
-function toggleFavFinal(id, btn){
-  id=Number(id);
-  var favs=getFavsFinal();
-
-  if(favs.includes(id)){
-    favs=favs.filter(function(x){return x!==id;});
-  }else{
-    favs.push(id);
-  }
-
-  saveFavsFinal(favs);
-  refreshFavButtonsFinal();
-  renderFavPanelFinal();
-}
-
-function refreshFavButtonsFinal(){
-  var favs=getFavsFinal();
-
-  document.querySelectorAll(".fav-final[data-id]").forEach(function(btn){
-    var id=Number(btn.dataset.id);
-    var active=favs.includes(id);
-    btn.classList.toggle("active", active);
-    btn.textContent=active ? "♥" : "♡";
-  });
-
-  var header=document.getElementById("headerFavBtnFinal");
-  var count=document.getElementById("headerFavCountFinal");
-
-  if(header){
-    header.classList.toggle("active", favs.length>0);
-    header.childNodes[0].nodeValue=favs.length>0 ? "♥" : "♡";
-  }
-  if(count){
-    count.textContent=favs.length;
-    count.style.display=favs.length ? "flex" : "none";
-  }
-}
-
-function openFavPanelFinal(){
-  var panel=document.getElementById("favPanelFinal");
-  if(panel) panel.classList.add("open");
-  renderFavPanelFinal();
-}
-
-function closeFavPanelFinal(){
-  var panel=document.getElementById("favPanelFinal");
-  if(panel) panel.classList.remove("open");
-}
-
-function removeFavFinal(id){
-  id=Number(id);
-  var favs=getFavsFinal().filter(function(x){return x!==id;});
-  saveFavsFinal(favs);
-  refreshFavButtonsFinal();
-  renderFavPanelFinal();
-}
-
-function renderFavPanelFinal(){
-  var wrap=document.getElementById("favItemsFinal");
-  if(!wrap || typeof PRODUCTS==="undefined") return;
-
-  var favs=getFavsFinal();
-  if(!favs.length){
-    wrap.innerHTML="<p>No tienes favoritos guardados.</p>";
-    return;
-  }
-
-  wrap.innerHTML=favs.map(function(id){
-    var p=PRODUCTS.find(function(x){return Number(x.id)===Number(id);});
-    if(!p) return "";
-    var full=p.full||p.fullPrice||800;
-    return '<div class="fav-item-final"><img src="'+p.img+'" alt="'+p.name+'"><div><h4>'+p.name+'</h4><p>Decant desde $'+p.ml3+' · Frasco 100ml $'+Number(full).toLocaleString("es-MX")+'</p></div><button onclick="removeFavFinal('+p.id+')" type="button">Quitar</button></div>';
-  }).join("");
-}
-
-function addFullBottleToCartFinal(id){
-  var p=PRODUCTS.find(function(x){return Number(x.id)===Number(id);});
-  if(!p) return;
-
-  var cid="full_"+id;
-  var price=Number(p.full||p.fullPrice||800);
-
-  if(typeof cart==="undefined") window.cart=[];
-  var ex=cart.find(function(x){return x.cid===cid;});
-
-  if(ex) ex.qty++;
-  else cart.push({cid:cid,id:id,name:p.name,img:p.img,price:price,ml:"100ml",qty:1});
-
-  if(typeof notify==="function") notify("✓ "+p.name+" 100ml agregado");
-  if(typeof renderCart==="function") renderCart();
-}
-
-window.addEventListener("load", function(){
-  setTimeout(function(){
-    if(typeof renderProducts==="function") renderProducts();
-    if(typeof renderNov==="function") renderNov();
-    if(typeof renderFullPerfumes==="function") renderFullPerfumes();
-    refreshFavButtonsFinal();
-  },300);
-});
-</script>
-
-
-<script>
-function toggleFavFinal(){}
-function refreshFavButtonsFinal(){}
-function openFavPanelFinal(){}
-function closeFavPanelFinal(){}
-function renderFavPanelFinal(){}
-function toggleAthelierFavorite(){}
-function refreshAthelierFavoriteButtons(){}
-function openAthelierFavorites(){}
-function closeAthelierFavorites(){}
-function renderAthelierFavoritesPanel(){}
-</script>
-
-
-<script id="full-perfumes-final-script">
-var fullCat = window.fullCat || "Todos";
-
-function setFullCat(cat, btn){
-  fullCat = cat || "Todos";
-  document.querySelectorAll(".full-perfumes-filter .cat-btn").forEach(function(b){
-    b.classList.remove("active");
-  });
-  if(btn) btn.classList.add("active");
-  renderFullPerfumes();
-}
-
-function renderFullPerfumes(){
-  var grid = document.getElementById("fullGrid");
-  if(!grid || typeof PRODUCTS === "undefined") return;
-
-  var list = (!fullCat || fullCat === "Todos") ? PRODUCTS : PRODUCTS.filter(function(p){ return p.cat === fullCat; });
-  var h = "";
-
-  for(var i=0; i<list.length; i++){
-    var p = list[i];
-    var price = Number(p.full || p.fullPrice || 800);
-
-    h += '<div class="pcard full-pcard">';
-    h += '<div class="pimg"><img src="'+p.img+'" alt="'+p.name+'" onerror="this.style.opacity=0"><span class="pbadge">'+p.cat+'</span></div>';
-    h += '<div class="pinfo">';
-    h += '<div class="pname">'+p.name+'</div>';
-    h += '<div class="ptype">'+p.type+'</div>';
-    h += '</div>';
-    h += '<button class="full-price-cart-final" onclick="addFullBottleToCartFinal('+p.id+')" type="button">100ml · $'+price.toLocaleString("es-MX")+' MXN</button>';
-    h += '</div>';
-  }
-
-  grid.innerHTML = h || '<p style="grid-column:1/-1;text-align:center;color:var(--warm-gray);font-size:.75rem;">No hay perfumes completos en esta categoría.</p>';
-}
-
-function addFullBottleToCartFinal(id){
-  if(typeof PRODUCTS === "undefined") return;
-
-  var p = PRODUCTS.find(function(x){ return Number(x.id) === Number(id); });
-  if(!p) return;
-
-  var price = Number(p.full || p.fullPrice || 800);
-  var cid = "full_" + id;
-
-  if(typeof cart === "undefined") window.cart = [];
-
-  var existing = cart.find(function(x){ return x.cid === cid; });
-  if(existing){
-    existing.qty++;
-  }else{
-    cart.push({
-      cid: cid,
-      id: id,
-      name: p.name,
-      img: p.img,
-      price: price,
-      ml: "100ml",
-      qty: 1
-    });
-  }
-
-  if(typeof notify === "function") notify("✓ " + p.name + " 100ml agregado");
-  if(typeof renderCart === "function") renderCart();
-}
-
-window.addEventListener("load", function(){
-  setTimeout(function(){
-    if(typeof renderFullPerfumes === "function") renderFullPerfumes();
-  }, 300);
-});
-</script>
-
-
-<script id="force-render-full-perfumes">
-window.addEventListener("load", function(){
-  setTimeout(function(){
-    if(typeof renderFullPerfumes === "function"){
-      renderFullPerfumes();
-    }
-  }, 600);
-});
-</script>
-
-
-
-<!-- FIX DEFINITIVO: BOTÓN 100ML + PRECIO EN PERFUMES COMPLETOS -->
-<style id="fix-definitivo-boton-100ml-perfumes-completos">
-  /* Esta regla vence al CSS anterior que ocultaba todos los botones dentro de .full-perfumes-grid */
-  .full-perfumes-grid button.full-price-cart-final,
-  .full-perfumes-grid button.full-price-cart-final:not(.fav-product-btn),
-  #fullGrid button.full-price-cart-final,
-  #fullGrid button.full-price-cart-final:not(.fav-product-btn){
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    width:calc(100% - 2.2rem) !important;
-    margin:1rem auto 1.2rem !important;
-    padding:1rem .7rem !important;
-    border:1px solid rgba(184,149,106,.32) !important;
-    border-radius:0 !important;
-    background:#f6f0e8 !important;
-    color:#2d2622 !important;
-    font-family:'Josefin Sans',sans-serif !important;
-    font-size:.82rem !important;
-    letter-spacing:.08em !important;
-    text-align:center !important;
-    text-transform:none !important;
-    line-height:1.25 !important;
-    cursor:pointer !important;
-    position:relative !important;
-    z-index:5 !important;
-    appearance:none !important;
-    -webkit-appearance:none !important;
-  }
-
-  .full-perfumes-grid button.full-price-cart-final:hover,
-  #fullGrid button.full-price-cart-final:hover{
-    background:#b8956a !important;
-    color:#fff !important;
-    border-color:#b8956a !important;
-  }
-
-  /* Oculta botones viejos de decants dentro de perfumes completos, pero deja vivo el botón 100ml */
-  .full-perfumes-grid .padd,
-  .full-perfumes-grid .ptag,
-  .full-perfumes-grid .popts,
-  .full-perfumes-grid .full-bottle-btn,
-  .full-perfumes-grid .add-btn,
-  .full-perfumes-grid .nov-add{
-    display:block !important;
-  }
-</style>
-
-<script id="fix-definitivo-render-boton-100ml-perfumes-completos">
-(function(){
-  function moneyMXN(n){
-    n = Number(n || 800);
-    return n.toLocaleString('es-MX');
-  }
-
-  window.renderFullPerfumes = function(){
-    var grid = document.getElementById('fullGrid');
-    if(!grid || typeof PRODUCTS === 'undefined') return;
-
-    var cat = window.fullCat || fullCat || 'Todos';
-    var list = (!cat || cat === 'Todos') ? PRODUCTS : PRODUCTS.filter(function(p){ return p.cat === cat; });
-    var h = '';
-
-    for(var i=0; i<list.length; i++){
-      var p = list[i];
-      var price = Number(p.full || p.fullPrice || 800);
-
-      h += '<div class="pcard full-pcard">';
-      h += '<div class="pimg"><img src="'+p.img+'" alt="'+p.name+'" onerror="this.style.opacity=0"><span class="pbadge">'+p.cat+'</span></div>';
-      h += '<div class="pinfo">';
-      h += '<div class="pname">'+p.name+'</div>';
-      h += '<div class="ptype">'+p.type+'</div>';
-      h += '</div>';
-      h += '<button class="full-price-cart-final" onclick="addFullBottleToCartFinal('+p.id+')" type="button">100ml · $'+moneyMXN(price)+' MXN</button>';
-      h += '</div>';
-    }
-
-    grid.innerHTML = h || '<p style="grid-column:1/-1;text-align:center;color:var(--warm-gray);font-size:.75rem;">No hay perfumes completos en esta categoría.</p>';
-  };
-
-  window.setFullCat = function(cat, btn){
-    window.fullCat = cat || 'Todos';
-    if(typeof fullCat !== 'undefined') fullCat = window.fullCat;
-    document.querySelectorAll('.full-perfumes-filter .cat-btn').forEach(function(b){ b.classList.remove('active'); });
-    if(btn) btn.classList.add('active');
-    window.renderFullPerfumes();
-  };
-
-  window.addFullBottleToCartFinal = function(id){
-    if(typeof PRODUCTS === 'undefined') return;
-    var p = PRODUCTS.find(function(x){ return Number(x.id) === Number(id); });
-    if(!p) return;
-
-    var price = Number(p.full || p.fullPrice || 800);
-    var cid = 'full_' + id;
-    if(typeof window.cart === 'undefined') window.cart = [];
-
-    var existing = window.cart.find(function(x){ return x.cid === cid; });
-    if(existing) existing.qty++;
-    else window.cart.push({cid:cid,id:p.id,name:p.name,img:p.img,price:price,ml:'100ml',qty:1});
-
-    if(typeof notify === 'function') notify('✓ ' + p.name + ' 100ml agregado');
-    if(typeof renderCart === 'function') renderCart();
-    if(typeof openCart === 'function') openCart();
-  };
-
-  window.addEventListener('load', function(){
-    setTimeout(function(){ window.renderFullPerfumes(); }, 250);
-    setTimeout(function(){ window.renderFullPerfumes(); }, 900);
-  });
-})();
-</script>
-
-
-<!-- FAVORITOS ATHELIER - CORAZÓN EN NAV -->
-<div id="favPanelFinal" class="fav-panel-final" aria-hidden="true">
-  <div class="fav-panel-box-final">
-    <div class="fav-panel-head-final">
-      <div>
-        <span>Favoritos</span>
-        <p>Perfumes guardados por este usuario</p>
-      </div>
-      <button type="button" onclick="closeFavPanelFinal()" aria-label="Cerrar favoritos">×</button>
-    </div>
-    <div id="favItemsFinal" class="fav-items-final"><p>No tienes favoritos guardados.</p></div>
-  </div>
-</div>
-
-<style id="fix-corazon-favoritos-nav-final">
-  /* Vuelve a activar favoritos aunque reglas anteriores los hayan ocultado */
-  #headerFavBtnFinal,
-  #favPanelFinal,
-  .fav-final{
-    display:flex !important;
-    visibility:visible !important;
-    opacity:1 !important;
-  }
-
-  #headerFavBtnFinal.header-fav-btn-final{
-    position:relative !important;
-    width:38px !important;
-    height:38px !important;
-    align-items:center !important;
-    justify-content:center !important;
-    border:1px solid rgba(184,149,106,.28) !important;
-    background:rgba(253,250,245,.85) !important;
-    color:var(--charcoal) !important;
-    cursor:pointer !important;
-    border-radius:999px !important;
-    font-family:'Josefin Sans',sans-serif !important;
-    transition:all .25s ease !important;
-  }
-  #headerFavBtnFinal:hover,
-  #headerFavBtnFinal.active{
-    border-color:var(--gold) !important;
-    color:var(--gold) !important;
-    background:#fff !important;
-  }
-  .header-fav-heart-final{
-    font-size:21px !important;
-    line-height:1 !important;
-    display:block !important;
-    transform:translateY(-1px) !important;
-  }
-  .header-fav-count-final{
-    position:absolute !important;
-    top:-6px !important;
-    right:-6px !important;
-    min-width:17px !important;
-    height:17px !important;
-    align-items:center !important;
-    justify-content:center !important;
-    border-radius:999px !important;
-    background:var(--gold) !important;
-    color:#fff !important;
-    font-size:10px !important;
-    font-weight:600 !important;
-    letter-spacing:0 !important;
-  }
-
-  .fav-final{
-    position:absolute !important;
-    top:12px !important;
-    right:12px !important;
-    width:36px !important;
-    height:36px !important;
-    align-items:center !important;
-    justify-content:center !important;
-    border:1px solid rgba(184,149,106,.35) !important;
-    border-radius:999px !important;
-    background:rgba(253,250,245,.92) !important;
-    color:var(--charcoal) !important;
-    font-size:21px !important;
-    line-height:1 !important;
-    cursor:pointer !important;
-    z-index:20 !important;
-    padding:0 !important;
-  }
-  .fav-final.active,
-  .fav-final:hover{
-    color:var(--gold) !important;
-    border-color:var(--gold) !important;
-    background:#fff !important;
-  }
-
-  #favPanelFinal.fav-panel-final{
-    position:fixed !important;
-    inset:0 !important;
-    z-index:3000 !important;
-    background:rgba(42,37,32,.38) !important;
-    align-items:flex-start !important;
-    justify-content:flex-end !important;
-    padding:92px 22px 22px !important;
-    pointer-events:none !important;
-    opacity:0 !important;
-    transition:opacity .25s ease !important;
-  }
-  #favPanelFinal.fav-panel-final.open{
-    pointer-events:auto !important;
-    opacity:1 !important;
-  }
-  .fav-panel-box-final{
-    width:min(420px, calc(100vw - 44px)) !important;
-    max-height:calc(100vh - 120px) !important;
-    overflow:auto !important;
-    background:var(--white) !important;
-    border:1px solid rgba(184,149,106,.25) !important;
-    box-shadow:0 18px 45px rgba(0,0,0,.18) !important;
-  }
-  .fav-panel-head-final{
-    display:flex !important;
-    align-items:flex-start !important;
-    justify-content:space-between !important;
-    gap:1rem !important;
-    padding:1.1rem 1.2rem !important;
-    border-bottom:1px solid rgba(184,149,106,.16) !important;
-  }
-  .fav-panel-head-final span{
-    display:block !important;
-    color:var(--charcoal) !important;
-    font-family:'Cormorant Garamond',serif !important;
-    font-size:1.65rem !important;
-    font-weight:300 !important;
-    line-height:1 !important;
-  }
-  .fav-panel-head-final p{
-    margin:.35rem 0 0 !important;
-    color:var(--warm-gray) !important;
-    font-size:.66rem !important;
-    letter-spacing:.12em !important;
-    text-transform:uppercase !important;
-  }
-  .fav-panel-head-final button{
-    border:none !important;
-    background:none !important;
-    color:var(--charcoal) !important;
-    font-size:30px !important;
-    line-height:1 !important;
-    cursor:pointer !important;
-  }
-  .fav-items-final{
-    display:block !important;
-    padding:1rem 1.2rem 1.2rem !important;
-  }
-  .fav-items-final > p{
-    margin:0 !important;
-    color:var(--warm-gray) !important;
-    font-size:.82rem !important;
-    text-align:center !important;
-    padding:1.5rem .5rem !important;
-  }
-  .fav-item-final{
-    display:flex !important;
-    gap:13px !important;
-    align-items:center !important;
-    padding:12px 0 !important;
-    border-bottom:1px solid rgba(184,149,106,.12) !important;
-  }
-  .fav-item-final img{
-    width:58px !important;
-    height:58px !important;
-    object-fit:contain !important;
-    background:#faf7f1 !important;
-    flex:0 0 auto !important;
-  }
-  .fav-item-final h4{
-    margin:0 !important;
-    color:var(--charcoal) !important;
-    font-size:.92rem !important;
-    font-weight:400 !important;
-  }
-  .fav-item-final p{
-    margin:.25rem 0 0 !important;
-    color:var(--warm-gray) !important;
-    font-size:.7rem !important;
-    line-height:1.35 !important;
-  }
-  .fav-item-final button{
-    margin-left:auto !important;
-    border:none !important;
-    background:var(--charcoal) !important;
-    color:#fff !important;
-    padding:.55rem .7rem !important;
-    font-size:.62rem !important;
-    letter-spacing:.09em !important;
-    text-transform:uppercase !important;
-    cursor:pointer !important;
-  }
-</style>
-
-<script id="fix-corazon-favoritos-nav-script-final">
-(function(){
-  function readFavs(){
-    try{return JSON.parse(localStorage.getItem('athelier_favs_final') || '[]').map(Number).filter(Boolean);}
-    catch(e){return [];}
-  }
-  function writeFavs(favs){
-    localStorage.setItem('athelier_favs_final', JSON.stringify(Array.from(new Set(favs.map(Number).filter(Boolean)))));
-  }
-  function money(n){return Number(n || 0).toLocaleString('es-MX');}
-
-  window.getFavsFinal = readFavs;
-  window.saveFavsFinal = writeFavs;
-
-  window.toggleFavFinal = function(id, btn){
-    id = Number(id);
-    var favs = readFavs();
-    if(favs.indexOf(id) >= 0) favs = favs.filter(function(x){return x !== id;});
-    else favs.push(id);
-    writeFavs(favs);
-    window.refreshFavButtonsFinal();
-    window.renderFavPanelFinal();
-  };
-
-  window.refreshFavButtonsFinal = function(){
-    var favs = readFavs();
-    document.querySelectorAll('.fav-final[data-id]').forEach(function(btn){
-      var id = Number(btn.getAttribute('data-id'));
-      var active = favs.indexOf(id) >= 0;
-      btn.classList.toggle('active', active);
-      btn.textContent = active ? '♥' : '♡';
-    });
-    var header = document.getElementById('headerFavBtnFinal');
-    var count = document.getElementById('headerFavCountFinal');
-    var heart = header ? header.querySelector('.header-fav-heart-final') : null;
-    if(header) header.classList.toggle('active', favs.length > 0);
-    if(heart) heart.textContent = favs.length ? '♥' : '♡';
-    if(count){
-      count.textContent = favs.length;
-      count.style.display = favs.length ? 'flex' : 'none';
-    }
-  };
-
-  window.openFavPanelFinal = function(){
-    var panel = document.getElementById('favPanelFinal');
-    if(panel){panel.classList.add('open'); panel.setAttribute('aria-hidden','false');}
-    window.renderFavPanelFinal();
-  };
-  window.closeFavPanelFinal = function(){
-    var panel = document.getElementById('favPanelFinal');
-    if(panel){panel.classList.remove('open'); panel.setAttribute('aria-hidden','true');}
-  };
-  window.removeFavFinal = function(id){
-    writeFavs(readFavs().filter(function(x){return x !== Number(id);}));
-    window.refreshFavButtonsFinal();
-    window.renderFavPanelFinal();
-  };
-  window.renderFavPanelFinal = function(){
-    var wrap = document.getElementById('favItemsFinal');
-    if(!wrap || typeof PRODUCTS === 'undefined') return;
-    var favs = readFavs();
-    if(!favs.length){wrap.innerHTML = '<p>No tienes favoritos guardados.</p>'; return;}
-    wrap.innerHTML = favs.map(function(id){
-      var p = PRODUCTS.find(function(x){return Number(x.id) === Number(id);});
-      if(!p) return '';
-      var full = Number(p.full || p.fullPrice || 0);
-      var extra = full ? ' · Frasco 100ml $' + money(full) : '';
-      return '<div class="fav-item-final"><img src="'+p.img+'" alt="'+p.name+'"><div><h4>'+p.name+'</h4><p>'+p.type+' · Decant desde $'+money(p.ml3)+extra+'</p></div><button onclick="removeFavFinal('+p.id+')" type="button">Quitar</button></div>';
-    }).join('');
-  };
-
-  document.addEventListener('click', function(e){
-    var panel = document.getElementById('favPanelFinal');
-    if(panel && panel.classList.contains('open') && e.target === panel) window.closeFavPanelFinal();
-  });
-
-  window.addEventListener('load', function(){
-    setTimeout(function(){
-      if(typeof renderProducts === 'function') renderProducts();
-      window.refreshFavButtonsFinal();
-      window.renderFavPanelFinal();
-    }, 700);
-  });
-})();
-</script>
-
-
-
-<!-- FIX: FAVORITOS TAMBIÉN EN PERFUMES COMPLETOS -->
-<style id="fix-favoritos-perfumes-completos">
-  #fullGrid .pimg,
-  .full-perfumes-grid .pimg,
-  .full-pcard .pimg{
-    position:relative !important;
-  }
-  #fullGrid .fav-final,
-  .full-perfumes-grid .fav-final,
-  .full-pcard .fav-final{
-    display:flex !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    position:absolute !important;
-    top:12px !important;
-    right:12px !important;
-    left:auto !important;
-    width:36px !important;
-    height:36px !important;
-    align-items:center !important;
-    justify-content:center !important;
-    border:1px solid rgba(184,149,106,.35) !important;
-    border-radius:999px !important;
-    background:rgba(253,250,245,.94) !important;
-    color:var(--charcoal) !important;
-    font-size:21px !important;
-    line-height:1 !important;
-    cursor:pointer !important;
-    z-index:999 !important;
-    padding:0 !important;
-    margin:0 !important;
-    text-indent:0 !important;
-    letter-spacing:0 !important;
-  }
-  #fullGrid .fav-final.active,
-  #fullGrid .fav-final:hover,
-  .full-perfumes-grid .fav-final.active,
-  .full-perfumes-grid .fav-final:hover{
-    color:var(--gold) !important;
-    border-color:var(--gold) !important;
-    background:#fff !important;
-  }
-</style>
-
-<script id="fix-favoritos-perfumes-completos-script">
-(function(){
-  function moneyMXN(n){
-    return Number(n || 800).toLocaleString('es-MX');
-  }
-
-  window.renderFullPerfumes = function(){
-    var grid = document.getElementById('fullGrid');
-    if(!grid || typeof PRODUCTS === 'undefined') return;
-
-    var cat = window.fullCat || (typeof fullCat !== 'undefined' ? fullCat : 'Todos');
-    var list = (!cat || cat === 'Todos') ? PRODUCTS : PRODUCTS.filter(function(p){ return p.cat === cat; });
-    var favs = (typeof getFavsFinal === 'function') ? getFavsFinal() : [];
-    var h = '';
-
-    for(var i=0; i<list.length; i++){
-      var p = list[i];
-      var id = Number(p.id);
-      var price = Number(p.full || p.fullPrice || 800);
-      var active = favs.includes(id);
-
-      h += '<div class="pcard full-pcard">';
-      h += '<div class="pimg">';
-      h += '<button class="fav-final '+(active ? 'active' : '')+'" data-id="'+id+'" onclick="toggleFavFinal('+id+', this)" type="button" aria-label="Agregar '+p.name+' a favoritos">'+(active ? '♥' : '♡')+'</button>';
-      h += '<img src="'+p.img+'" alt="'+p.name+'" onerror="this.style.opacity=0">';
-      h += '<span class="pbadge">'+p.cat+'</span>';
-      h += '</div>';
-      h += '<div class="pinfo">';
-      h += '<div class="pname">'+p.name+'</div>';
-      h += '<div class="ptype">'+p.type+'</div>';
-      h += '</div>';
-      h += '<button class="full-price-cart-final" onclick="addFullBottleToCartFinal('+id+')" type="button">100ml · $'+moneyMXN(price)+' MXN</button>';
-      h += '</div>';
-    }
-
-    grid.innerHTML = h || '<p style="grid-column:1/-1;text-align:center;color:var(--warm-gray);font-size:.75rem;">No hay perfumes completos en esta categoría.</p>';
-    if(typeof refreshFavButtonsFinal === 'function') refreshFavButtonsFinal();
-  };
-
-  window.setFullCat = function(cat, btn){
-    window.fullCat = cat || 'Todos';
-    if(typeof fullCat !== 'undefined') fullCat = window.fullCat;
-    document.querySelectorAll('.full-perfumes-filter .cat-btn, .full-perfumes-filter .cfbtn').forEach(function(b){ b.classList.remove('active'); });
-    if(btn) btn.classList.add('active');
-    window.renderFullPerfumes();
-  };
-
-  window.addEventListener('load', function(){
-    setTimeout(function(){
-      window.renderFullPerfumes();
-      if(typeof refreshFavButtonsFinal === 'function') refreshFavButtonsFinal();
-    }, 900);
-  });
-})();
-</script>
-
-
-
-<!-- AJUSTE FINAL: CORAZÓN FUNCIONAL ENCIMA DEL BOTÓN VIEJO EN PERFUMES COMPLETOS -->
-<style id="fix-corazon-full-superpuesto-final">
-  #fullGrid .full-pcard .pimg,
-  .full-perfumes-grid .full-pcard .pimg{
-    position:relative !important;
-  }
-
-  /* Mueve el corazón funcional a la misma esquina del botón viejo para taparlo sin borrarlo */
-  #fullGrid .full-pcard .fav-final,
-  .full-perfumes-grid .full-pcard .fav-final{
-    position:absolute !important;
-    top:12px !important;
-    left:12px !important;
-    right:auto !important;
-    width:42px !important;
-    height:42px !important;
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    border-radius:999px !important;
-    border:1.5px solid #d8c2a1 !important;
-    background:#fff !important;
-    color:#c39a63 !important;
-    font-size:22px !important;
-    font-weight:700 !important;
-    line-height:1 !important;
-    padding:0 !important;
-    margin:0 !important;
-    z-index:2147483647 !important;
-    cursor:pointer !important;
-    pointer-events:auto !important;
-    box-shadow:0 4px 14px rgba(42,37,32,.08) !important;
-    text-indent:0 !important;
-    letter-spacing:0 !important;
-    appearance:none !important;
-    -webkit-appearance:none !important;
-  }
-
-  #fullGrid .full-pcard .fav-final.active,
-  #fullGrid .full-pcard .fav-final:hover,
-  .full-perfumes-grid .full-pcard .fav-final.active,
-  .full-perfumes-grid .full-pcard .fav-final:hover{
-    background:#c39a63 !important;
-    border-color:#c39a63 !important;
-    color:#fff !important;
-  }
-</style>
 
 </body>
 </html>
